@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="../../assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 49</h3>
+        <p>‘How can a brat’s eyes be so…’<br><br>Jake’s teeth chattered. He wanted to get up, but he couldn’t move a single finger. When didn’t know what to do, he heard frivolous footsteps.<br><br>“Did you come from the magic tower? Wow, you came so early.”<br><br>His head, which was frozen stiff, moved towards a voice as light as the footsteps. There was a red-haired elf smiling at him.<br><br>“H-head instructor Rimmer?”<br><br>“Correct. Please come this way. I have things to tell you before training.”<br><br>Rimmer tapped his arm and pointed towards the head instructor’s room.<br><br>“Hmm, okay.”<br><br>He answered and turned his head back to where Raon was. The boy was swinging his sword as if he wasn’t interested.<br><br>“Haa…”<br><br>Jake took a deep breath and stood up. If Rimmer was any later in coming up to him, he would have pissed his pants.<br><br>“Are you feeling unwell?”<br><br>“N-no. Let’s go.”<br><br>“Yes!”<br><br>Following Rimmer, who nodded lightly, he entered the head instructor’s room. Unlike his neat appearance, the room was so messy that there was nowhere to sit.<br><br>“Please sit down.”<br><br>“But there’s nowhere to sit…”<br><br>“Ah, that’s true.”<br><br>Rimmer smiled lightly and stood from his rocking chair.<br><br>“Well, it won’t take a long time, so let’s just do it like this. Are you already aware that you need to use strengthening magic on the orc that will be facing the trainees?”<br><br>“Of course.”<br><br>“Because of my excellent teachings, the trainees are stronger than they should be at their age. A normal orc won’t be of any use for their training.”<br><br>“Ah…”<br><br>His head went blank to his sudden boasting.<br><br>“I’ll tell you how strong each of those children are, so please use the strengthening magic according to that. Is that possible?”<br><br>“It’s not a difficult thing to do since I’m specialized in summoning and handling monsters.”<br><br>“I guess, since the vice master of magic tower, Verbin has also complimented you…”<br><br>“Ah…”<br><br>When Rimmer talked about the vice master of magic tower, Jake’s expression was strangely distorted.<br><br>“And one more thing, about the hallucination magic to make the monster look like a human…”<br><br>“Ah, that can be solved with this.”<br><br>Jake lifted his right hand and showed him the ring on his middle finger.<br><br>“It’s a hallucination artifact given to me by the vice master. Casting hallucination magic on the trainees is a simple matter using this ring.”<br><br>“Oh, that’s perfect.”<br><br>Rimmer whistled in satisfaction.<br><br>“Then please take care of it. Once everything ends well, I’ll buy you and the vice master a drink.”<br><br>After saying that, he left the head instructor’s room.<br><br>‘My job’s gotten easier.’<br><br>Since Rimmer entrusted him with everything about the monster, it wasn’t going to be difficult to summon that orc to inflict a deadly injury to Raon. He could run away afterward while making excuses.<br><br>“That guy…”<br><br>Jake recalled Raon, the boy he saw a moment ago. He was reluctant about injuring a boy he didn’t even know at first, but he wasn’t anymore.<br><br>The damn brat that humiliated him had to be wounded even more seriously.<br><br> <br><br>Clench.<br><br> <br><br>Jake clenched his jaw and left the instructor’s room.<br><br> <br><br>***<br><br> <br><br>Raon calmly watched the middle-aged magician head to the instructor’s room behind Rimmer.<br><br>Even though it was only for a split second, he could feel killing intent from that magician. Rather than killing, he wanted to harm him. It was something that anyone other than him wouldn’t have been able to perceive.<br><br>You are so hated at such a young age. What have you been doing with your life? Back in devildom, every single devil worshiped the King of Essence…<br><br>‘Shut up.’<br><br>Raon used his feet to push Wrath, who was laughing at him, away.<br><br>‘He must be the one.’<br><br>Karoon’s dirty trick that Judiel mentioned seemed to be that magician.<br><br>To be unable to hide his own pressure… He is worse than a kitten.<br><br>‘At least a kitten is cute. A guy like him is completely useless.’<br><br>Raon swept his hair back, looking at the instructor’s room.<br><br>‘He will strengthen the monster.’<br><br>Following Karoon’s order, the magician was certainly going to enhance the monster that was going to fight him to an abnormal degree.<br><br>‘He will try to either kill me or inflict a serious injury.’<br><br>He could only laugh at how pathetic the plan was. His son was too good for him.<br><br>‘Pathetic.’<br><br>When he turned around while clicking his tongue, he met Runaan’s eyes as she entered the training ground. Her eyes, which he hadn’t seen for the past two days, were the same as always. His chest tightened for some reason.<br><br>“Dad told me today’s training was about fighting monsters.”<br><br>She started talking about the day’s training, as if she didn’t want to think about what happened back then.<br><br>“Is it?”<br><br>“Mhm.”<br><br>Runaan visibly nodded. She was obviously forcing herself to act like nothing happened, but he couldn’t tell her anything since she seemed to want to forget about that matter.<br><br>She went to the break room after telling him she was going to prepare for the training.<br><br>Aren’t you going to ask her about it?<br><br>‘I don’t know what to say. And it’s her family’s problem.’<br><br>He wasn’t sure how he could give advice about her family when he didn’t even know anything about his own emotions.<br><br>However, he at least knew what Syria did to Runaan. He could solve that problem with the correct opportunity.<br><br>“Y-young master. Did you know about it?”<br><br>As he was bitterly licking his lips, Dorian approached him while restlessly rubbing his stomach.<br><br>“About what?”<br><br>“Today’s actual battle training, i-it’s not just about fighting a monster.”<br><br>“Then what?”<br><br>“Apparently, we have to kill a monster! We have to shed blood for real! Wh-what do we do?”<br><br>Biting his fingernail, he rolled his eyes.<br><br>“Bloodshed, huh…?”<br><br>“Yes! Ending their life is the training’s objective! It’s really crazy!”<br><br>“That’s great.”<br><br>“Eeek!”<br><br>Leaving behind Dorian, who was screaming, he looked at the breakroom that had Runaan entered.<br><br>Let’s try breaking the curse.<br><br> <br><br>* * *<br><br> <br><br>“Everyone, attention!”<br><br>Rimmer, who went to the instructor’s room, was already standing on the platform. He clapped his hands to get everyone’s attention.<br><br>“Do you remember that I told you to brace yourselves, since there would be actual battle training today?”<br><br>“Yes!”<br><br>The trainees answered as they gathered in the center of the training ground. Their expressions were full of anticipation.<br><br>“It looks like you are starting to trust me. Your eyes are glittering.”<br><br>The trainees giggled at Rimmer’s joke. It seemed they started to understand Rimmer’s true intentions after spending so much time with him.<br><br>“Although you already know most of it with the hints and information spread by some instructors, I shall still explain. Today’s training is an actual battle against monsters.”<br><br>His voice, which had been completely mischievous until a moment ago, grew calm. The entire training ground’s atmosphere became heavy.<br><br>“There’s no mercy in a monster’s axe. Unlike a match between you, or with knight trainees, they will never stop. Don’t be careless or nervous. Keep your usual composure when you face them.”<br><br>“Yes!”<br><br>Trainees clenched their fists and shouted their heads off.<br><br>“This is the magic tower’s magician Jake, who will be helping us with training today. Give your greetings.”<br><br>“I look forward to your kind cooperation!”<br><br>“I-I’m also looking forward to your cooperation.”<br><br>Jake bowed in response and quickly sought out Roan with his eyes.<br><br>‘It’s fine now.’<br><br>The strange gaze that squeezed his heart earlier wasn’t there anymore. They were normal eyes that he wouldn't have noticed if he met him in the street.<br><br>‘However…’<br><br>There was no way the pressure earlier was a mistake. Considering he was Karoon’s target, there was something special with that boy.<br><br>“Then Sir Magician, please take care of it.”<br><br>“Yes.”<br><br>Jake nodded to Rimmer, who was waving his hand, and went to the front of the platform.<br><br>“Summon monster.”<br><br>When Jake hit the ground with his staff after the incantation, a magic circle was drawn on the training ground’s floor. A green light burst out of the blue letters forming in a circle.<br><br> <br><br>Whoosh!<br><br> <br><br>The light disappeared slowly and an enormous humanoid shape appeared.<br><br>Over two meters tall with robust muscles, protruding front teeth, and green skin—it was an orc, the most common yet most dangerous monster.<br><br>“Grrr!”<br><br>“Eek!”<br><br>“Ugh!”<br><br>The orc ground his teeth while lifting his axe. The trainees swallowed, facing the wild bloodthirst and stench.<br><br>“Since it’s still under my control, you don’t need to worry.”<br><br>Once Jake spun his finger, the orc turned in the same direction.<br><br>“The monster you will be fighting today is this orc.”<br><br>“I knew it was an orc!”<br><br>“Is it finally time for a real battle…”<br><br>“Haa.”<br><br>The trainees looked up at Jake, expressions mixed between nervousness and excitement.<br><br>“Just as the instructor said, you shouldn’t be careless because it’s an orc. Since I can’t stop it sometimes, you should always maintain your focus. And…”<br><br>Jake pointed at the orc with the ring on his right hand.<br><br> <br><br>Whir.<br><br> <br><br>The magic circle surrounding the orc was twisted like a vine and shone with five colors, then the orc’s appearance started to change.<br><br>The protruding front teeth went back into place and the green skin burned with white. It only took a few seconds until the orc became a plain, middle-aged man with brown hair holding an axe.<br><br>“A-a human?”<br><br>“What’s this!”<br><br>“Why is there a human…?”<br><br>“You won’t be fighting a normal orc, but an orc that has been transformed into a human through magic.”<br><br>Jake moved the orc’s axe and pointed it at the trainees.<br><br>“Eek!”<br><br>“Ugh!”<br><br>“Th-that’s just a human!”<br><br>The trainees were surprised at the sudden change and stared blankly at the orc that had become a human.<br><br>“I’ll tell you one more thing.”<br><br>Rimmer walked up in front of Jake and raised his finger.<br><br>“The fight today isn’t about winning against the orc or neutralizing it. It will only end once you cut off its head.”<br><br>With his raised finger, he pointed at the human-appearing orc.<br><br>“Ah…”<br><br>“Th-that’s…”<br><br>The panicked trainees could only look at each other without being able to step up.<br><br>“Most of the orcs that were caught by magicians have already killed a human before. Since there’s no need for mercy, do your best to fight and win.”<br><br>Rimmer said in an unusually heavy voice, then stepped back.<br><br>‘Dorian’s information was accurate.’<br><br>Raon nodded.<br><br>‘It’s not bad training.’<br><br>Most swordsmen were unable to make the finishing blow in their first real battle.<br><br>In fact, many unfortunate geniuses had died like that, unable to overcome their first actual fight despite having excellent abilities.<br><br>In order to prevent that from happening, today’s fight wasn’t only about fighting a monster, but also about preparing them to fight humans in the future.<br><br>‘And…’<br><br>Raon looked at Runaan, who was sticking next to him. Her lips were trembling after hearing that she had to cut its head off.<br><br>‘It’s a perfect opportunity to break her curse.’<br><br>Rimmer was probably unaware of it, but it seemed he could undo Syria’s brainwashing on Runaan thanks to this training.<br><br>Are you not even paying attention to that scum magician?<br><br>‘Of course.’<br><br>Raon nodded. The best thing he could do was strengthen some slightly ferocious orc that he got somewhere to try fighting him. It wasn’t even worth being nervous about.<br><br>Removing the engraved fear from Runaan’s mind was more important right now.<br><br>“Then let’s start right away. The first person to fight will be…”<br><br>“I’ll do it.”<br><br>Burren raised his hand before Jake even finished speaking.<br><br>“You must know him, right? He is the son of Central Martial Palace’s master. Please strengthen the orc a lot for him.”<br><br>“Alright.”<br><br>Jake licked his lips upon hearing Rimmer’s explanation. Of course he knew about him, since he was the son of the person who gave him the task.<br><br>“Loop Agility, Loop Strength.”<br><br>Once he uttered the incantation to increase the agility and strength, blue light fluttered around the orc and his yellow eyes became even more violent.<br><br>“Go.”<br><br>Once Jake extended his finger forward, the orc stepped up with heavy footsteps.<br><br>After clenching and opening his fist a few times, Burren unsheathed the real sword he had been supplied with. He nodded at Jake, signaling that he was ready.<br><br>“Then let’s begin.”<br><br>Once Jake flicked his finger, the letters surrounding the orc disappeared.<br><br>“Grrr!”<br><br>The orc kicked the off from the ground with a thunderous roar. Running like a beast, it slammed its axe down at Burren’s head.<br><br>“I can see everything.”<br><br>Burren lifted his sword as he used his aura.<br><br> <br><br>Clash!<br><br> <br><br>As a rusty axe and well-polished sword collided against each other, red sparks appeared.<br><br>“Kugh!”<br><br>Burren raised his eyes sharply. The hand that was holding the sword trembled, as if it were creaking.<br><br>‘What is this weight…?’<br><br>He’d never seen nor fought against an orc, but he thought he could easily cut through him with how strong he currently was.<br><br>However, the weight of the orc’s axe wasn’t something he could handle easily. It wasn’t lacking in any way when compared to the knight trainee of the Owen Kingdom he’d fought last time.<br><br>“Haa!”<br><br>Powerfully turning his wrist, he deflected the orc’s axe.<br><br>“Grr!”<br><br>The orc stepped back a couple times, then dashed back at him even faster. Its eyes glowed yellow, full of intent—it wanted to tear Burren limb from limb.<br><br>The trainees that were watching were surprised by the bloodlust, but Burren wasn’t intimidated.<br><br>“How dare you!”<br><br>Instead, he furiously slashed with his sword.<br><br> <br><br>Wham! Wham!<br><br> <br><br>When the orc pummeled down his axe as if it was facing the enemy of its life, Burren’s sword pierced into its opening.<br><br> <br><br>Stab!<br><br> <br><br>Red blood spurt from the orc’s shoulder and thigh.<br><br>“Kuahhh!”<br><br>However, it kept coming at him with an even fiercer roar. It looked like a complete beast now.<br><br>“I’ll end you!”<br><br>Getting under the orc, Burren slashed upwards.<br><br> <br><br>Clank!<br><br> <br><br>The moment he was about to cut the orc’s head off after pushing back its axe, Burren’s sword was turned to the right. Instead of its neck, it cut through more than half of the orc’s forearm.<br><br>“Hmm…”<br><br>Burren bit his lip, unable to finish it off despite having the opportunity.<br><br>“Kuah!”<br><br>Orc kept forcing its way into him like a bull, despite being seriously injured in its shoulder and forearm. It had become weaker, but its vigor remained the same.<br><br> <br><br>Woosh!<br><br> <br><br>Burren used his footwork to get to the orc’s back as it slowed down. The moment he was about to cut off the orc’s head by slashing horizontally, his sword stopped once again.<br><br>“Damn it!”<br><br>Burren stepped back while cursing. The tip of his sword was trembling, as if he was terrified.<br><br>“Burren.”<br><br>Rimmer, who was watching the fight from the platform, raised himself.<br><br>“Even though you know that what’s trying to kill you is a monster, and not a human, you still can’t kill it, right?”<br><br>His voice was peaceful, as if he already knew it would happen.<br><br>“It’s because you are good natured. Since you see that monster as a human, you can’t move your sword properly. However…”<br><br>Rimmer continued, pointing at the orc grinding its teeth.<br><br>“Like I said before, that orc has already tasted human blood before. Most of the monsters that magicians possess have already killed humans before.”<br><br>“He’s right.”<br><br>Jake nodded, confirming what Rimmer said.<br><br>“It’s okay to be unable to kill it now, as this is just a practice. However, if your hand stops on the battlefield, the swordsman or monster that you were unable to kill will end up killing your ally instead.”<br><br>“Ugh…”<br><br>While deflecting the orc’s axe, Burren listened to Rimmer’s calm advice.<br><br>“And you can’t stop now if you want to catch up to your target, can you?”<br><br>Hearing that, Burren turned his head towards Raon. After meeting his red eyes, his sword was clad in a heavier aura than before.<br><br>“Grrrr!”<br><br>“How dare you!”<br><br>The moment the orc’s axe dropped vertically, Burren stretched his knees and pierced into its space.<br><br>“Haa!”<br><br>With a shout of concentration, his sword drew a semicircle.<br><br> <br><br>Slash!<br><br> <br><br>As a red line was drawn into the sky, the orc’s head fell and its body collapsed. As its life ended, its human appearance returned to its original orcish form.<br><br>“Huff! Huff!”<br><br>Burren gasped for breath, sticking his sword on the ground. However, he didn’t look away. He kept watching the corpse he’d created.<br><br>“Good job.”<br><br>Rimmer smiled and Burren looked at him for a moment, then turned his head. It was the first time that their eyes met without frowning.<br><br>“......”<br><br>Burren took a glance at Raon for the last time, then returned to his place.<br><br> <br><br>Snap!<br><br> <br><br>When Jake snapped his fingers, the orc’s corpse disappeared. However, the blood covering the training ground’s floor still remained.<br><br>“Well then, next is…”<br><br>“Me!”<br><br>Martha stood up, confidently raising her hand. There was no hesitation in her footsteps as she walked up to the orc.<br><br>“Hmm…”<br><br>Raon looked away from Martha's confident back and looked at Runaan.<br><br>“Ugh…”<br><br>Contrary to Martha, Runaan’s lips were trembling as she looked at the blood-soaked floor. Her face looked as white as a sheet.<br><br>Raon’s eyes grew gloomy. Runaan had been avoiding shedding blood as much as she could.<br><br>When she sparred against other trainees, or the knight trainee, she’d only suppressed them without actually injuring them.<br><br>He didn’t really think anything of it back then, but now that he looked back at it, it seemed she’d decided to fight like that because she was afraid of blood.<br><br>‘So, it was the blood.’<br><br>Syria Sullion carved fear into her while showing her blood. Crushing the squirrel must’ve been to remind her of that trauma.<br><br>Frightening coldness covered Raon’s red eyes.<br><br>‘Syria Sullion.’<br><br>‘I’ll break the curse you’ve cast on Runaan.’</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0048.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0001.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0001.html">
+                                    <h4 class="text-body">Chapter 0001</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0002.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0002.html">
+                                    <h4 class="text-body">Chapter 0002</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0003.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0003.html">
+                                    <h4 class="text-body">Chapter 0003</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+    <script src="../../assets/js/CustomSort.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="../../assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 40</h3>
+        <p>A silver line was flowing through the white snow, falling down like a torrent. It was the march of armored knights.<br><br>“Are you okay, my lord prince?”<br><br>A middle-aged man with a huge, bear-like build looked at the boy walking right next to him.<br><br>“I’m still fine. But the knight trainees seem to be struggling because it’s snowing more heavily than expected.”<br><br>The prince turned around. Unlike the composed prince, the knight trainees clearly looked tired.<br><br>“Is Zieghart still far away?”<br><br>“It looks like we are almost there, since this heavy snow is getting worse.”<br><br>“Almost there? Then do Zieghart’s swordsmen endure this snow every day?”<br><br>“That’s not the case.”<br><br>The middle-aged knight shook his head while smiling lightly.<br><br>“The weather becomes worse the closer we get to the Zieghart, but…”<br><br>As soon as he said that, the violent snow suddenly stopped, and the sun hiding behind the gray cloud finally appeared.<br><br>“The weather inside Zieghart is perfectly clear. The temperature is lower, though.”<br><br>“Huh…”<br><br>The prince looked up at the sky in surprise. It was so clear that he felt like the endless snowstorm was just a dream.<br><br>“Wow!”<br><br>“Th-the snow stopped immediately.”<br><br>The others’ jaws also dropped.<br><br>“Duke Tartan, what is this weather…?”<br><br>“It looks like magic, but it isn’t. This strange natural environment is the reason that Zieghart is called a natural fortress.”<br><br>The middle-aged man named Duke Tartan smiled, pointing towards the huge rampart that could be seen further ahead.<br><br>“Although, they have been broken through before.”<br><br>“Hmm…”<br><br>Since the prince knew about that occasion, he nodded calmly.<br><br>“Since they are waiting for us, let’s enter first.”<br><br>Duke Tartan pointed towards the people waiting under Zieghart’s rampart.<br><br>In front of an enormous iron door, which was big enough to fit a giant, swordsmen wearing red coats were looking towards them with sharp gazes.<br><br>“Okay.”<br><br>The prince nodded shortly and headed towards the iron gate, where the Zieghart’s gatekeepers were standing.<br><br> <br><br>***<br><br> <br><br>Raon, who was about to return to the training ground after lunch, stopped.<br><br>‘What is that?’<br><br>From the direction of the front gate, he could feel the presence of many people. The sound of armor bumping into each other was a metallic sound that couldn’t usually be heard in Zieghart.<br><br>Soon enough, the foreign minister Illiune appeared, and the knights clad in silver armor followed him.<br><br>‘The Owen kingdom…’<br><br>There was a lion’s head drawn on the left side of their silver armor. It was the Owen Kingdom’s emblem.<br><br>The other trainees and swordsmen also stopped walking, watching the Owen Kingdom’s knights passing by.<br><br>“They are the envoys of the Owen Kingdom.”<br><br>Dorian stood next to him and gently whistled.<br><br>“Envoys?”<br><br>“They’ve been cleaning everywhere in the household because of the Owen Kingdom’s envoys. Did you not know?”<br><br>“I didn’t. But their numbers are pretty small for an envoy.”<br><br>Raon furrowed his brows, looking at the small children walking behind the knights.<br><br>“Ah, they are the knight trainees that came along with the third prince of the Owen Kingdom. They must be here to get some experience.”<br><br>“You are knowledgeable.”<br><br>“Because there were rumors about it. Look, everyone looks like they knew about it already.”<br><br>“That’s true.”<br><br>It looked like he was the only one who didn’t know about it, and maybe Runaan, who was usually just blank.<br><br>Raon looked through the kingdom’s envoys.<br><br>‘They are pretty strong.’<br><br>The knight trainees were as strong as the trainees in the fifth training ground, as if they were proving they were from the Six Kings just like the Ziegharts.<br><br>‘Well, whether they are strong or not doesn’t really matter to me… huh?’<br><br>When he was turning around to head towards the training ground, he met the eyes of the knight trainee that was standing at the frontmost.<br><br>His sky like blue eyes contained an unshakable spirit.<br><br>‘He is pretty strong for his age.’<br><br>He understood it just by looking at him. That knight trainee was the strongest of them.<br><br>‘However.’<br><br>That assessment was considering his age, and he still had a long way to go to be considered good for Raon.<br><br>As expected, the blue-eyed child couldn’t read Raon’s strength, turning around after looking at him for a moment.<br><br>‘I have no time to pay attention to something like that.’<br><br>He was busy completing his footwork and swordsmanship. Since he wasn’t going to meet the kingdom’s envoys, watching them for a moment was plenty.<br><br>Raon walked towards the training ground, only thinking about the footwork’s flows.<br><br> <br><br>***<br><br> <br><br>‘What is this…?’<br><br>For the first time in his life, the third prince of the Owen Kingdom, Greer De Owen felt a chill go down his spine.<br><br>He slowly raised his head. The more his gaze raised, the more difficult it became for him to breathe.<br><br>Everything was because of the man who that sitting at the top.<br><br>The Destructive King of the North, Glenn Zieghart. The man called the strongest swordsman of the continent zapped all his strength from his limbs just from being seen.<br><br>“Thank you for your effort on your trip.”<br><br>“Thank you for your warm welcome.”<br><br>He barely managed to come to his senses thanks to Duke Tartan’s voice from next to him.<br><br>“He looks exactly like the previous king in his youth. I can understand why he cherishes you so much.”<br><br>Glenn Zieghart slowly nodded, watching his face.<br><br>“Th-thank you.”<br><br>He couldn’t talk properly because his mouth was completely dry. His presence was too overbearing, despite not using any pressure. It was a completely different experience from when he met the Kingdom’s best sword.<br><br>“I-I have a letter from his majesty the king.”<br><br>The third prince took out a golden envelope. He forced his trembling legs to stand up.<br><br>“Kuh…”<br><br>While shivering, he approached the platform and handed over the letter.<br><br>“Hmm.”<br><br>Upon seeing that, Glenn’s eyes shone for a second, but quickly disappeared.<br><br>“As you’ve requested, I’ve arranged things so that you can observe the trainees.”<br><br>Putting the letter aside, Glenn slowly spoke.<br><br>“I’ve prepared an evening banquet, so do rest for today and visit them tomorrow.”<br><br>“Thank you for your consideration.”<br><br>“Then see you again later.”<br><br>“Yes.”<br><br>The third prince took three steps backward and bowed, then stood up.<br><br>“And the duke…”<br><br>“I have something to tell the head of house about. Please go ahead and rest.”<br><br>Duke Tartan closed his eyes while smiling lightly.<br><br>“I see.”<br><br>The third prince nodded shortly, then left the audience chamber.<br><br>“He is a very talented child. He will rise to the throne of the sword, before the throne of the king.”<br><br>Glenn opened his mouth first, after a short silence.<br><br>“I knew you would realize it at a glance. The third prince is called the Kingdom’s best sword in waiting.”<br><br>“Certainly, it is a rare talent.”<br><br>“It’s not just about talent, he also has a strong willpower. He also visited the south to witness Robert’s swordsmanship.”<br><br>Duke Tartan smiled happily, looking at the door through which the third prince had left.<br><br>“Hmph.”<br><br>Glenn slightly lifted the corners of his mouth.<br><br>‘Talent, effort and willpower, huh…’<br><br>Just by looking at the third prince’s eyes, he could tell what kind of talent he had and what kind of efforts he’d been making.<br><br>He must have experienced various things and worked hard from a young age. However, Glenn knew somebody even better than him.<br><br>Raon Zieghart.<br><br>Since he knew about Raon’s effort and willpower, he wasn’t convinced with the third prince’s greatness.<br><br>“Since you didn’t come here to show off the prince, let’s get to the point.”<br><br>The letter in Glenn’s hand burned up.<br><br>“You burned it without even taking a look.”<br><br>Although the letter was burned up, Duke Tartan’s expression didn’t change.<br><br>“There’s no way he would’ve entrusted an important letter to a child.”<br><br>“I knew it.”<br><br>Duke Tartan knelt and respectfully lowered his head, unlike when he was boasting about the third prince.<br><br>“I will convey the words of the king of Owen Kingdom, Lacrosse Albert de Owen the second.”<br><br>When he raised his head, his eyes were completely serious.<br><br>“The five darknesses have started to move.”<br><br> <br><br>* * *<br><br> <br><br>Pow!<br><br> <br><br>Raon’s right hand advanced as smoothly as a salmon swimming upstream.<br><br>His left foot followed. His lower body moved as fluently as a deer running through the forest.<br><br>It wasn’t fast but smooth, not powerful but abrupt.<br><br>The twelve forms of the River Footwork that he was using looked as cheerful and free as a leaf riding the wind.<br><br> <br><br>Thud!<br><br> <br><br>With a step shaking the ground, he finished training the River Footwork.<br><br>“Huff…”<br><br>Exhaling an excited breath, he raised his head, straightening his back.<br><br>‘They are still watching.’<br><br>When he looked around, the trainees, who were watching him train, turned in surprise.<br><br>Ever since the first day they’d learned the River Footwork, they’d been training while watching him instead of the instructors.<br><br>Burren, Runaan, and Martha weren’t exceptions, either.<br><br>“Um!”<br><br>“Hmph.”<br><br>Burren and Martha snorted upon meeting his eyes and turned around.<br><br>“Mhm.”<br><br>Of course, Runaan didn’t avoid his gaze. Instead, she came closer to him and performed her footwork. That meant she wanted him to teach her.<br><br>“Oh, well.”<br><br>Raon shook his head and pointed out what Runaan was lacking in her footwork.<br><br>“Young master, can you teach me too?”<br><br>Dorian approached him while scratching his belly pocket, showing him his footwork.<br><br>“To begin with, your posture is too high. Get a bit lower…”<br><br>When he was pointing out his problems, the door to the training ground opened and Rimmer entered.<br><br>‘Why is he here?’<br><br>Raon frowned, watching Rimmer trotting in. It was the first time he came to visit during break time.<br><br>“Does everyone know about the Owen Kingdom’s envoy visiting us today?”<br><br>“Yes, we do.”<br><br>Burren stepped up and responded. His round eyes looked surprised that Rimmer was visiting during break time.<br><br>“They are going to hold a banquet for the envoys this evening. Since they have knight trainees, those of you who are the same age as them are also allowed to participate.”<br><br>“Oh!”<br><br>“Banquet?”<br><br>The trainees' expressions brightened at the thought of meeting the Owen Kingdom’s knights and becoming acquainted with the knight trainees.<br><br>“However!”<br><br>Rimmer shook his head.<br><br>“You haven’t even properly acquired the River Footwork yet. If it were me, I’d be too ashamed to participate, for sure!”<br><br>“Ugh!”<br><br>“Th-that is…”<br><br>The trainees bit their lips to the unexpected words.<br><br>“Ah? Were you planning to participate? But you still have lots of training left to do, right? You haven’t completed the swordsmanship nor the footwork, though?”<br><br>He sticked out his face and teased them as he looked through the trainees.<br><br>“Da-damn it!”<br><br>“Haa…”<br><br>The trainees lowered their heads, speechless.<br><br>“There’s only one person who is qualified to participate.”<br><br>Rimmer’s gaze was directed at Raon.<br><br>“What are you gonna do?”<br><br>“I’m not interested.”<br><br>Raon shook his head and picked up his training sword. His River Footwork was almost perfect, but he still had a long way to go until he could combine it with his swordsmanship.<br><br>It wasn’t time for him to make personal connections through a banquet. It was time to do his best in training.<br><br>“That’s a good attitude.”<br><br>Rimmer smiled. He had a satisfied expression, as if saying that he knew it.<br><br>“Well, if you really want to go, I’ll allow it. Does anyone want to?”<br><br>Putting his hand on Raon’s shoulder, he looked through the trainees.<br><br>He seemed to be asking whether they wanted to go when Raon, the strongest one among them, wanted to keep training.<br><br>“Hmph!”<br><br>“…Nope.”<br><br>Martha and Burren turned around and stepped away to train.<br><br>“……” <br><br>Runaan hadn’t been listening to Rimmer from the beginning and had been practicing footwork.<br><br>“Well, keep training then. There will be plenty of banquets to participate in once you get stronger! I’m gonna leave then.”<br><br>Rimmer shook his hand as if he were making fun of them and left the training ground.<br><br>“Hmm…”<br><br>Raon scratched his chin while watching him leave. Considering Rimmer’s personality, he would’ve allowed them to participate in a banquet. It was a bit strange that he had stopped them, instead.<br><br>‘What is he thinking about now?’<br><br> <br><br>***<br><br> <br><br>The splendid lights were shining upon the main building’s banquet hall, instead of the heavy snows.<br><br>The third prince of the Owen Kingdom, Greer De Owen, sat at his designated seat while licking his lips.<br><br>‘I’m tired.’<br><br>His head was spinning from greeting people from Zieghart for hours. He just wanted to practice his sword, since something like a banquet made him uncomfortable.<br><br>The king’s order wasn’t the only reason that he was participating in something he didn’t enjoy.<br><br>Zieghart’s sword.<br><br>And the swordsmen who practiced that sword. It was in order to observe them.<br><br>“Haa.”<br><br>The third prince gulped down the drink on the table and frowned.<br><br>‘They are certainly amazing warriors.’<br><br>The pressures of Zieghart’s warriors were proud and powerful. Their might didn’t lose to the Owen Kingdom’s knights, which filled him with excitement.<br><br>‘However.’<br><br>The might of Zieghart’s young swordsmen was completely disappointing.<br><br>If it was another house or kingdom, they would’ve been called extremely talented people, but they were a bit lacking to be called the Six King’s trainees.<br><br>‘They are even worse than Robert's.’<br><br>The head of the southern house Robert, which he’d visited before coming to Zieghart, seemed to have better young swordsmen than them.<br><br>“I don’t think I need to look around tomorrow.”<br><br>Glenn had allowed him to observe the training, but he didn’t have any reason to visit, considering their levels.<br><br>“You look disappointed.”<br><br>“Huff!”<br><br>He hurriedly turned around, hearing a light voice coming from behind.<br><br>“El-elf?”<br><br>A red-haired and dark green-eyed elf was smiling, his hands behind his back.<br><br>“Do you want to see the real deal?”</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0039.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0041.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0001.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0001.html">
+                                    <h4 class="text-body">Chapter 0001</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0002.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0002.html">
+                                    <h4 class="text-body">Chapter 0002</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0003.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0003.html">
+                                    <h4 class="text-body">Chapter 0003</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+    <script src="../../assets/js/CustomSort.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="../../assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 19</h3>
+        <p>Step.<br><br>Raon took a step forward. The more he approached Rimmer, the stronger his pressure became.<br><br>Not just the other children, it was difficult for even Burren or Runaan to pierce through such pressure. Yet, Raon could only laugh.<br><br>‘He’s setting it up for me.’<br><br>He didn’t need to hide his abilities now that he had decided to live as Raon Zieghart.<br><br>The stage to show off his talent was set, his abilities had opened, so he only needed to play his part on the stage.<br><br>“How is it? Tell me if it’s too difficult…”<br><br>“It’s fine.”&nbsp;<br><br>Raon smiled lightly and moved his feet.<br><br>‘It’s too much for my current expertise.’<br><br>Expertise followed the soul, not the body. That’s why Raon didn’t only have the expertise of Raon Zieghart, but also that of the greatest assassin Raon.<br><br>Woosh!<br><br>On top of Raon Zieghart’s small yet sturdy pressure, the expertise of the assassin Raon, who had never failed before, stood at attention.<br><br>Step.<br><br>The sound of his footsteps walking on the training ground’s sand changed. Raon’s expertise, carried on his shoulder, expressed its serene intent.<br><br>Rip!<br><br>Pressure as sharp as a blade ripped Rimmer’s green wind pressure in half.<br><br>“What are you…?”<br><br>Rimmer glared. Panic appeared in his green eyes, which had always been easy going.<br><br>Whir!<br><br>Raon walked forward without responding. Cutting through the turbulent wind, he took five steps, and stood in front of Rimmer.<br><br>Tap.<br><br>He casually extended his hand and tapped Rimmer’s shoulder.<br><br>“Is the test over?”<br><br>“Eh? Yes…”<br><br>To his confident yet composed voice, Rimmer just nodded.<br><br>“Thank you.”<br><br>Lowering his hand, he erased the expertise of the assassin that he had called. It looked like he had strained himself, as his mind was in a daze.<br><br>“…”<br><br>Rimmer's mouth was still open wide, unable to hide his surprise.<br><br>You! What the hell are you?<br><br>Wrath’s voice also sounded surprised. It was rare for him to show any emotion other than anger.<br><br>“Hmm.”<br><br>While waiting for Rimmer’s reaction, Raon looked around the silent training ground.<br><br>The children from vassal families and collaterals that had jeered at him, the children who had trained with him and were rooting for him, and even the parents remained silent.<br><br>“Wh-what? He pierced it? That brat?”<br><br>“No, just how did this…?”<br><br>“He is just a patient that hasn’t even learned aura! It’s impossible!”<br><br>The trainees' parents muttered with blank expressions.<br><br>“Raon! How is your body?”<br><br>“Young master, you must have strained yourself.”<br><br>Sylvia and Helen teared up. They looked impressed, but their words spoke only of worry for his body.<br><br>However, Glenn Zieghart’s expressions didn’t change. He looked as cold as always, as if a layer of ice covered his face.<br><br>‘That one’s a real deal.’<br><br>Raon shook his head, looking at Glenn.<br><br>***<br><br>“Who the hell are you?”<br><br>Rimmer expressed his amazement looking at the calm Raon.<br><br>“You’ve been watching me for the six last months. I am Raon.”<br><br>“I’m asking you because you surpassed it. I emitted a pressure that you couldn't withstand with your current ability. It was just a joke, and I didn’t even imagine that you would pierce through it.”<br><br>In order to discover the ability that Raon had been hiding, he gave off a pressure too powerful for him to withstand.<br><br>He was certain that Raon couldn’t pierce it, no matter how much power he had been hiding, yet Raon single handedly ripped through his pressure. Honestly, he still couldn’t believe what had happened.<br><br>“Hmm…”<br><br>Rimmer took a glance at people behind Raon.<br><br>‘Well, I do like that.’<br><br>Their noisy mouths were shut tight, just like his own. The entirety of the training ground was at a loss because of what Raon had just done.<br><br>“Ahem. I was a bit distracted, despite being the head instructor.”<br><br>Rimmer went back to the platform, riding the green wind.<br><br>“With Raon Zieghart as the last participant, the selection test for official trainees has ended. However, one more important event remains.”<br><br>Everyone’s gaze was focused on him as he mentioned an important event.<br><br>“It is the announcement of the first place trainee, the representative of the trainees.”<br><br>Since there was a high chance that the first place trainee would become the family’s head, greed dwelled in everyone’s eyes—children and parents alike.<br><br>‘It went according to the plan, but the situation is different from expected.’<br><br>It was actually decided that first place would go to Raon Zieghart. He had shown the most progress as a temporary trainee, so it fit the test’s purpose. Although, he didn’t expect him to pass so easily.<br><br>‘Thanks to that, the accident that I’d prepared for might not happen.’<br><br>Rimmer snickered and glanced through the trainees. Looking past Runaan and Burren, his eyes stopped on Raon.<br><br>“Raon Zieghart. From today onward, you are the top trainee of the fifth training ground. Please do your best in the future.”<br><br>“Oh! Young master Raon!”<br><br>“…”<br><br>Dorian clapped his hands, and Runaan clapped exactly three times, a strange expression on her face.<br><br>“Y-young master Raon is the top trainee!”<br><br>“Aww…”<br><br>“Lady Sylvia!”<br><br>Helen grabbed his head, and hugged Sylvia who was falling down.<br><br>“Eh?”<br><br>“Re-really?”<br><br>“That child is really in first place? I can’t believe it…”<br><br>“Raon was the one who withstood the most powerful pressure.”<br><br>“But he is Sylvia’s son! The runaway Sylvia!”<br><br>“That has no relation to the child’s abilities.”<br><br>“Wasn’t that a scam that Rimmer had planned all along? He definitely could’ve done it!”<br><br>The others started arguing, claiming that it was unbelievable.<br><br>“It… It’s a lie!”<br><br>Burren stood up with trembling lips.<br><br>“This can’t be!”<br><br>“What is a lie, and what can’t be?”<br><br>Rimmer looked back at Burren, uninterested.<br><br>“Raon is worse than me in terms of stamina, strength, and talent! I can’t accept such a person getting first place!”<br><br>“You saw it, too. Raon easily broke through pressure way more powerful than the one you barely managed to pass. He deserves first place.”<br><br>“He must have used a trick!”<br><br>“Burren Zieghart, are you doubting my decision?”<br><br>Rimmer’s smile remained the same, but the atmosphere changed. It felt like a sharpness was added to the cool wind.<br><br>“Th-that’s not what I mean! I’m saying that he cheated! Raon couldn’t even follow me yesterday, so it makes no sense that he pierced through such a powerful pressure!”<br><br>“He’s right!”<br><br>“Even the instructor couldn’t believe it, right?”<br><br>The collaterals that followed Burren stood next to him.<br><br>“Hmm…”<br><br>Rimmer scratched his chin. He certainly didn’t expect Raon to pierce through his pressure so easily, so he could understand their claim.<br><br>“That’s true.”<br><br>“How can he do that when he is suffering from the Curse of Frost?”<br><br>“He doesn’t even have aura.”<br><br>When he looked around, not only the children but also the adults were mumbling. They started to doubt the test, despite having seen it with their own eyes.<br><br>“Well, I do understand your doubts. I was surprised as well.”<br><br>“That’s right!”<br><br>Burren’s eyes opened wide at the glimpse of hope.<br><br>“We are a family of warriors, Zieghart. A duel should determine the first place, rather than a test like this!”<br><br>“Do you want the first place so much that you are suggesting a duel against Raon?”<br><br>“I mean, a duel with anyone. It doesn’t have to be me…”<br><br>“Your eyes are full of desire; you don’t need to lie.”<br><br>Rimmer snickered and waved his hand. Burren blushed like an apple, but he didn’t refute it.<br><br>“But the test is already over. My lord, what shall we do with this situation?”<br><br>“Burren Zieghart.”<br><br>Glenn looked between Raon and Burren, then slowly opened his mouth.<br><br>“Yes!”<br><br>“You need to pay the price if you want to change the verdict. Are you sure you are ready for it?”<br><br>“Of course!”<br><br>Burren immediately answered without giving it a thought. He was confident he would win against Raon, no matter what.<br><br>“Raon Zieghart.”<br><br>This time, Glenn called Raon’s name.<br><br>“Yes.”<br><br>Raon saluted.<br><br>“The others cannot accept the result. Do you have any intention of competing with Burren?”<br><br>“I don’t.”<br>&nbsp;<br>* * *<br><br>Raon firmly shook his head.<br><br>“Eek!”<br><br>“Eh?”<br><br>“Eeeh…”<br><br>“Is… Is he crazy!”<br><br>Since nobody expected him to immediately refuse, everyone’s jaws dropped.<br><br>“The test is over, and the results are out. Without gaining anything in return, there is no reason for me to compete.”<br><br>“Hmm?”<br><br>“After you blabbered about the direct line, honor, and matters like that, I didn’t expect that you wouldn’t even accept the results.”<br><br>“Kuh!”<br><br>Burren’s flush darkened as he heard Raon’s sarcasm.<br><br>“Then do it like this.”<br><br>Everyone looked at Glenn, whose voice sounded like a lump of iron was pressing down on it.<br><br>“Duel with the title of first place on the line. If you win, I’ll issue you a bronze tablet.”<br><br>‘Bronze tablet!’<br><br>Zieghart issued gold, silver, or bronze tablets, depending on their accomplishments. Despite it being just a bronze tablet, one issued directly by the head of house would earn him some decent rewards.<br><br>‘That’s an unexpected piece of good luck.’<br><br>He’d already won the bet with Wrath by ending up with first place, and now Glenn would give him a bronze tablet. His reward had just doubled.<br><br>It looked like Glenn wished for Burren, from the direct line, to tag first place. Unfortunately, he wasn’t going to satisfy him.<br><br>“Understood.”<br><br>“Ra-Raon!”<br><br>“It’s alright.”<br><br>As soon as he nodded, Sylvia ran up to him. He smiled at his worrying mother.<br><br>“Thank you for trusting me! My lord, I won’t disappoint you!”<br><br>Burren bowed to Glenn, overwhelmed by his emotions.<br><br>“That’s enough, now begin the duel.”<br><br>“Yes!”<br><br>Springing to his feet, Burren walked up to Raon.<br><br>“To be facing me in a duel, your luck ends here.”<br><br>He continued while grinning.<br><br>“I didn’t like you from the very first time I saw you. I will show you the difference between the direct line and an abandoned insect.”<br><br>“Wow. The boy who couldn’t accept the results talks so much.’<br><br>Raon snickered and turned his wrist.<br><br>“You bastard…”<br><br>“Save the fight for the duel.”<br><br>Rimmer stood between them, shaking his head.<br><br>“The duel will be one round. You are disqualified if you use a weapon or aura. Fight with nothing but your body.’<br><br>“Understood!”<br><br>“Yes.”<br><br>“Well, then…”<br><br>Rimmer raised the hand that was blocking Raon and Burren’s vision of each other and stepped back.<br><br>“Begin!”<br><br>“Haap!”<br><br>Before the word ‘begin’ could reach his ears, Burren dashed. He thrust his fist sharply at Raon’s solar plexus.<br><br>Tap!<br><br>Raon turned the back of his hand to fend off his fist. The fist’s fierce rotation numbed his wrist.<br><br>“That’s not enough to stop my fist!”<br><br>Burren laughed coldly and thrust his fist a second time, this time at his stomach.<br><br>Pow!<br><br>He fended off the blow with his hand, but the impact sent pain up his forearm.<br><br>“This is the Void Tiger Fist that my father taught me personally. There was no rule against using a fist technique, so this isn’t against the rules.”<br><br>“Void Tiger Fist…”<br><br>Void Tiger Fist was Zieghart’s fist technique, consisting in rotating a fist to break through the enemy’s defense.<br><br>‘What shall I do…?’<br><br>It was powerful, but sloppy. He could easily beat him down.<br><br>‘It would be a waste to simply win.’<br><br>Since the stage was set, he wanted to use the opportunity to prove his ability to everyone.<br><br>“Where are you looking?!”<br><br>Burren swung his fist. Leaning back, he avoided fist and stepped backward.<br><br>“This is the difference in talent!”<br><br>He kept swinging his fist while using a stepping technique. Both his fist and steps were sloppy, but he was somewhat threatening thanks to his excellent physical abilities.<br><br>‘Talent, huh?’<br><br>Raon stepped sideways with glittering eyes. He considered the way to best deliver a blow to the idiots of Zieghart, who thought only of talent.<br><br>Martial arts study.<br><br>As expected of members of a military family, they consider a talent in martial arts study the most valuable.<br><br>‘And I have something great.’<br><br>Raon used his ‘Ring of Fire’ at full force. The moment the three rings began to rotate furiously, Burren’s movement became slower, and the flow of his fist technique could be seen.<br><br>“Did you give up?”<br><br>Burren thrusted his fist straight. A brutal wind brushed past his ear.<br><br>“Of course not.”<br><br>Raon’s hand moved in a half moon shape. Burren’s fist bounced back upon touching that rotation.<br><br>It was the same rotation as his Void Tiger Fist, but the direction was reversed.<br><br>“Eek!”<br><br>Burren’s expression wavered as he bounced back. But he grit his teeth and dashed at him again.<br><br>Tap!<br><br>Fending off his fist, Raon pushed him with his shoulder. With a slam, Burren stepped back.<br><br>Pow!<br><br>Raon kicked the ground and dashed into the panicking Burren’s chest.<br><br>“You bastard!”<br><br>Despite being in panic, he tried hitting his chin with his left fist. However, Raon had already finished analyzing his fist technique.<br><br>Pow!<br><br>Rotating in the other direction, he pushed Burren's fist back and struck at his stomach.<br><br>“Kugh!”<br><br>Burren knelt, foaming at the mouth.<br><br>“How… how are you using the Void Tiger Fist…?”<br><br>He drooled, mouth wide open at the unexpectedness of the situation.<br><br>“Wh-what happened just now?”<br><br>“How did he use the Void Tiger Fist…?”<br><br>“There’s no way Sylvia or Rimmer would’ve taught him that!”<br><br>“What just happened…?”<br><br>Everyone watching the duel widened their eyes in astonishment.<br><br>“You just showed me.”<br><br>Raon dusted off his hands, looking down on Burren coldly.<br><br>“I just copied your fist technique.”</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="#"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0020.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0001.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0001.html">
+                                    <h4 class="text-body">Chapter 0001</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0002.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0002.html">
+                                    <h4 class="text-body">Chapter 0002</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0003.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0003.html">
+                                    <h4 class="text-body">Chapter 0003</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+    <script src="../../assets/js/CustomSort.js"></script>
+</body>
+
+</html>
