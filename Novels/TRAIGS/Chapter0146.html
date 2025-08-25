@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="../../assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+<script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 's7qnzqxhqf',
+    });
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 146</h3>
+        <p>As soon as Wrath acknowledged his defeat, the messages announcing his victory popped up, one after the other.<br><br> <br><br>[All stats have increased by 5.]<br><br> <br><br>As Raon was smiling in excitement from the increased stats, the second message appeared.<br><br> <br><br>[The unique title ‘The One Who Bamboozled the King’ has been created.]<br><br> <br><br>The second reward was a title with a great name.<br><br>Who the hell created a title like that?<br><br>Wrath frowned in irritation.<br><br>I don’t like it!<br><br>‘I don’t know who named it, but I can see why I got the title.’<br><br>Raon snickered and called upon the title’s explanation.<br><br> <br><br>[The One Who Bamboozled the King<br><br>This title is given to those that bamboozled the king’s dignity with a method other than power.<br><br>Ability: Upon conversing with someone in a higher position or with more strength, the other party’s favor and trust is increased.]<br><br> <br><br>A ray of light shone in Raon’s red eyes as he read the description.<br><br>‘This is pretty good.’<br><br>It was really nice that the title made it easier to convince his opponents, as it wasn’t always possible to settle conflicts with a fight.<br><br>Since Wrath and Sloth had appeared, it was possible that he would encounter the other demon kings in the future. The title could make all the difference in crises like that.<br><br>‘And it should work against the heads of Houses as well.’<br><br>Since it should be also effective against the most powerful warriors like Glenn, the title was beneficial in many ways.<br><br>Hmph.<br><br>Wrath snorted upon reading the title’s description.<br><br>Do you believe a mere title like that would work against the King of Essence? It’s impossible for you to convince the King of Essence.<br><br>‘But it was already possible.’<br><br>Convincing Wrath was a piece of cake, since he just needed to mention the apple meat pies or mint chocolate.<br><br>The King of Essence is an aloof existence. He doesn’t listen to what other people tell him! You’d be way better off with some stats instead of a title like th…<br><br>‘Oh, don’t worry about that.’<br><br>What?<br><br>‘The stats are coming now.’<br><br>With a small smile, Raon pointed at the next group of messages.<br><br> <br><br>[You’ve achieved the sixth victory against Wrath.]<br><br> <br><br>[You’ve gained additional stats with the effects of six consecutive victories.]<br><br> <br><br>[Strength has increased by 2.]<br><br> <br><br>[Energy has increased by 2.]<br><br> <br><br>[Stamina has increased by 2.]<br><br> <br><br>He got 2 points in three stats thanks to his six consecutive victories.<br><br>‘What a great harvest.’<br><br>He got 9 in all of his stats and 2-3 points in several individual stats. It was the first time he had gotten that many stats at once since he obtained the system.<br><br>H-How many stat points did you even get today?<br><br>‘I don’t know. I think it’s about 11 points in terms of all stats.’<br><br>11? Did you just say 11?<br><br>Wrath’s hand was trembling like a leaf, coldness spreading from him.<br><br>Damn it! Those 11 points all came from the King of Essence’s main body!<br><br>‘I suppose.’<br><br>Raon calmly nodded.<br><br>You sucked them out from Sloth and extorted from the King of Essence! You are a damn spine breaker!<br><br>‘By the way, what is this?’<br><br>Since he was talking about Sloth, Raon raised his wrist and pointed at the black flower bracelet.<br><br>Why do you think the King of Essence would tell you about it?<br><br>Wrath snorted after staring at the bracelet for a while.<br><br>You should discover what it is on your own, since the King of Essence has no reason to tell you about it.<br><br>‘I guess you don’t know either.’<br><br>Raon snickered and shrugged his shoulders.<br><br>‘Even though you are a demon king, you are still ignorant about so many things.’<br><br>Wh-What kind of bullshit are you spouting? There’s nothing in the world that the King of Essence doesn’t know!<br><br>‘Then what is this?’<br><br>I’m not going to tell you.<br><br>‘That’s because you don’t know.’<br><br>You damn weasel!<br><br>Wrath finally burst in anger. An overwhelming coldness and wrath emerged and started stabbing him, like spikes.<br><br> <br><br>Cring!<br><br> <br><br>The 25 points of wrath also awakened and started gnawing at his body and soul from the inside.<br><br>‘Th-This is rather…’<br><br>Raon lowered his head, hand trembling.<br><br>When Sloth came to you, the 15 points of wrath weren't properly merged with your soul. Not even 10 of them were effective back then.<br><br>Wrath started pressuring Raon’s body, increasing the emotion of wrath even further.<br><br>But now, all 25 points of wrath are completely awakened! Your body shall become mine now!<br><br>‘You are pretty delusional.’<br><br>Raon grit his teeth to use the Ten Thousand Flames Cultivation and Glacier at the same time.<br><br>The aura that contained the heat of a volcano dashed through his mana circuit to melt the coldness, and Glacier’s wall of ice blocked the wrath trying to penetrate his brain.<br><br>That wasn’t all.<br><br>His soul level, which had increased after enduring Sloth’s power and Wrath’s interruption, crushed the emerging emotion.<br><br>H-How…<br><br>‘I didn’t just take your emotion of wrath without a plan.’<br><br>Raon wiped the sweat flowing down his forehead and smiled.<br><br>‘I was certain that it would allow me to grow stronger, even more than the wrath I received.’<br><br>He suggested the trade because he was confident that he could handle the 15 points of wrath he received.<br><br>Wrath’s attack—weakened by the Ring of Fire, the Ten Thousand Flames Cultivation and Glacier—wasn’t unbearable. He could endure it as much as he needed to.<br><br>Impossible!<br><br>Wrath didn’t give up and poured even more power into it, but Raon also increased the strength of his aura to protect his mind and body.<br><br> <br><br>Rumble!<br><br> <br><br>After the power struggle lasted for about thirty minutes, a blue window appeared in front of Raon’s eyes.<br><br> <br><br>[You’ve endured Wrath’s interference.]<br><br>Agility has increased by 1.]<br><br> <br><br>The message was telling him that he managed to endure Wrath’s interference. It was the second time he had received that message in one day.<br><br>‘Is it my birthday?’<br><br>Daaaamn it!<br><br> <br><br>* * *<br><br> <br><br>As Raon was laughing at salty Wrath, Dorian opened the door to the scout’s quarters and entered.<br><br>“Huh?”<br><br>His jaw dropped upon finding Raon in perfect shape, then he ran up to him.<br><br>“You woke up!”<br><br>Tears welled in his eyes as he placed his hand on the bed.<br><br>“How is your condition?”<br><br>“I’m fine.”<br><br>Raon nodded, rotating his shoulder. He wasn’t just fine—he was in the best condition possible.<br><br>“Aww, that’s a relief.”<br><br>“How long have I been unconscious?”<br><br>“It’s been four days, including today.”<br><br>Dorian sighed and stood up.<br><br>“You should wash yourself for now. You also need to drink some water and eat some soup!”<br><br>He put his hand in his belly pocket as he spoke. He took out a washbowl, a cup, and a soup bowl, then placed them on the round table.<br><br>“Why are you carrying a washbowl? And how did you just take the soup out of there…?”<br><br>“I was prepared for when you woke up.”<br><br>Dorian smiled joyfully while pouring washing water into the washbowl. He used a water bottle to fill the cup before putting it in Raon’s hand.<br><br>“Thank you.”<br><br>Raon smiled slightly and approached the table. Realizing that Dorian had been carrying all that for his sake, he felt warmth in his heart.<br><br>“I’m going to report to the commander!”<br><br>“Huh? Wait!”<br><br>He wanted to stop him since it wasn’t something worth reporting, but Dorian had already left the room.<br><br>“He is so impatient.”<br><br>Raon clicked his tongue and finished washing his face. He washed his mouth with water, then started eating the soup, which had a variety of sliced vegetables.<br><br>It had an excellent flavor, nutty and neat at the same time. He could also feel the texture of the vegetables from time to time, which made it fun to eat.<br><br>“Yua must’ve made this one.”<br><br>It was a proper soup, made with a recipe. It must’ve been Yua’s work, rather than Dorian’s.<br><br>You are right. I can sense the pineapple girl’s feelings in the taste.<br><br>Even though Wrath had been salty, he was now licking his lips right next to him. The demon king really was easy to please.<br><br>It’s a skill befitting the King of Essence’s maid. What are you doing? Keep eating already.<br><br>“Phew…”<br><br>Raon shook his head at Wrath, who kept mumbling, and kept eating the soup.<br><br>The food went down effortlessly, not only because he was hungry, but also because it was really delicious.<br><br>He finished the dish in no time. As he started drinking the water, Dorian opened the door and entered.<br><br>“Did you already finish?”<br><br>Dorian smiled, looking at the empty dish and cup.<br><br>“I was hungry.”<br><br>And there was a glutton that kept urging him on.<br><br>Raon let out a small sigh over Wrath. No matter how he thought about it, Wrath wasn’t a gourmet—he was a glutton that liked eating.<br><br>“The commander said he wants to see you. Do you think you can come?”<br><br>“I shall go if he calls me.”<br><br>He couldn’t refuse the commander’s summons.<br><br>‘And I have to explain the situation to him.’<br><br>Since it was obvious he would ask how he made Sloth leave, he had to explain it to him at some point.<br><br>He had already thought about an excuse for that, so there was no problem meeting him right away.<br><br>Humans naturally have lots of suspicion. I’m curious how they are going to deal with this matter.<br><br>Wrath’s grin looked like he was hoping for a devastating development as he patted his belly.<br><br>‘Your wish won’t come true, so mind your own business.’<br><br>Raon pushed Wrath, who tried sticking to him, away. He then put on his outerwear before standing up.<br><br>“Let’s go.”<br><br> <br><br>* * *<br><br> <br><br>“Huh? Sir Raon?”<br><br>“He’s up!”<br><br>“Sir Raon! How is your condition?”<br><br>As soon as Raon left the scout’s quarters, the scouts flocked to him and asked about his condition. Their wet gazes were full of worry.<br><br>“I’m fine. I’m completely recovered.”<br><br>“Haa… That’s a relief.”<br><br>“I was seriously worried.”<br><br>Raon waved his hand with a smile, and the scouts breathed out sighs of relief.<br><br>It wasn’t just the scouts. Everyone that saw him on his way to the commander’s room kept worrying about his body, to the point where he felt uncomfortable.<br><br>‘They are looking at me way differently than before.’<br><br>If they saw him as a hero before, they were now worshiping him as a god, although that was a bit embarrassing to admit.<br><br>Moreover, people that used to speak to him casually were now addressing him as ‘Sir’.<br><br>‘What’s going on?’<br><br>He could understand their gratitude because he saved their lives, but it was strange that they suddenly started calling him Sir. There must’ve been another reason for it.<br><br>Once he reached the commander’s room, still wondering about the reason, he could hear the word.<br><br>Zieghart.<br><br>It was a word that shouldn’t have appeared there.<br><br>“Dorian?”<br><br>“Ah, yes…”<br><br>Dorian scratched the back of his head. Apparently, he was already aware of it.<br><br>“Our identity has been revealed. But the commander revealed it himself.”<br><br>“Oh, I see.”<br><br>It was probably because he couldn’t hide them as mere mercenaries anymore, as the scale tipped too far.<br><br>“Then, does everyone know about it already?”<br><br>“Yes, but you don’t need to worry about it. After all, we didn’t reveal it ourselves.”<br><br>“I know, it’s just…”<br><br>He shook his head bitterly.<br><br>“I just feel like they won’t easily approach us anymore like before.”<br><br>“There’s a different reason for that.”<br><br>“A different reason?”<br><br>“Yes, let’s go upstairs for now.”<br><br>Dorian flinched, pointing at the headquarters in front of them.<br><br>“Alright.”<br><br>Raon nodded and went up to the conference room.<br><br>Unlike what he expected, Milland and Terian weren’t the only ones in the conference room. All of the other officers were there, as well.<br><br>It looked like everyone was gathered there, except for the officers on a mission or on guard duty.<br><br>Raon checked the people’s faces, then breathed out a sigh of relief.<br><br>‘Everyone’s alive.’<br><br>He was worried that a problem might have occurred, but fortunately no one was seriously injured.<br><br>Stop pretending to be a good person.<br><br>Wrath smiled coldly and sat on his head.<br><br>Even if you saved their lives, they would fear you, who might be connected to the demons. You’d better worry about yourself.<br><br>‘That might be the case.’<br><br>Raon nodded. It was completely possible, considering how people acted in his previous life.<br><br>However, there was a big mistake that Wrath was making.<br><br>Raon didn’t save them because he wanted something in return. He just wanted to save them. Since he didn’t have any expectations, there was no reason for him to be disappointed, no matter the outcome.<br><br>“Greeting the commander.”<br><br>Raon organized his thoughts and bowed at Milland.<br><br>“It’s nice to see you awake. Sit down over there.”<br><br>“Yes.”<br><br>He sat at the chair located in the center, following Milland’s gesture.<br><br>“I thought it’d take a long time for your recovery, but you’ve already recovered, even stronger than before.”<br><br>Milland exclaimed in surprise after checking his complexion.<br><br>“Countless geniuses have visited here in order to train, but none of them was as fast as you when it came to becoming stronger.”<br><br>“I was just lucky.”<br><br>“It’s not about luck. It’s your will and your ability. You are going to surpass even me soon enough.”<br><br>Milland shook his head, telling him to stop spouting nonsense. The other officers also smiled.<br><br>“I can speak comfortably since you are completely recovered.”<br><br>He leaned towards the table.<br><br>“How did you make the monster leave?”<br><br>“Hmm…”<br><br>Raon lowered his chin slightly, the movement easily missed.<br><br>‘I knew it would come down to this.’<br><br>It was an obvious question, one that he knew he would be asked. And of course, he had already prepared an answer.<br><br>I’m curious about what kind of excuse you are going to give, since they should also be aware of the fact that Sloth is a demon.<br><br>Wrath giggled in anticipation.<br><br>“I…”<br><br>“Wait. I asked you the question, but you don’t need to answer.”<br><br>As Raon was about to tell him the excuse he’d prepared, Milland raised his hand.<br><br>“Everyone here knows that he is a demon, a monster as strong as a demon king on top of that. You must’ve made a trade in order to make him leave.”<br><br>“Indeed.”<br><br>Just as he expected, they roughly knew how it went.<br><br>“And a demon of that caliber must’ve asked for your soul and body.”<br><br>“Hmm…?”<br><br>Raon’s response was delayed because of Milland’s unexpected reaction.<br><br>“I knew it!”<br><br>“So that’s what happened.”<br><br>“Raon…”<br><br>Milland and the officers bit their lips. It looked like they took that delay as a confirmation.<br><br>Th-This is a strange development…<br><br>Wrath’s raised eyebrows were trembling in anxiety.<br><br>“Seriously, you…”<br><br>“What? No, I just… huh?”<br><br>As Raon tried to give the excuse he’d prepared, Milland suddenly stood up, the other officers following him.<br><br>“Thank you! Raon!”<br><br>“Thank you!”<br><br>Milland and the officers bowed at once.<br><br>“Uh…”<br><br>Huh?<br><br>Receiving the sudden yet polite expressions of gratitude, Raon and Wrath’s eyes widened.<br><br>“Why are you doing this…?”<br><br>He could understand that they were thankful to him for saving their lives, but it felt a bit excessive. Moreover, he didn’t even say anything yet.<br><br>“You don’t need to say any further.”<br><br>“That’s right. We know that it’s not easy to talk about a trade with a demon.”<br><br>Milland and Terian shook their heads at the same time.<br><br>“You must’ve made a trade, staking your soul and body.”<br><br>What are you talking about? Why would this bastard stake his body and soul?<br><br>Wrath’s jaw dropped at the ridiculous development.<br><br>“We aren’t idiots. We already know that something you hold dear has been taken hostage by the demon.”<br><br>“He is right.”<br><br>“We all realize how much of a struggle Sir Raon went through on his own, while we were unconscious.”<br><br>“Sir Raon…”<br><br>The officers' gazes were filled with sadness and deep emotions.<br><br>I think they are idiots.<br><br>Wrath wrinkled his nose over the strange assumptions they were making.<br><br>“I pay my respect to your decision to sacrifice your soul in order to save Habun Castle, Raon Zieghart.”<br><br>“We are forever indebted to you!”<br><br>“Thank you, Sir Raon!”<br><br>The officers clenched their fists, expressions saddened. Some of them even had tears in their eyes.<br><br>What kind of madness are you spouting? This cheater isn’t the one who gave away his soul! It was the stupid sleepyhead!<br><br>Wrath yelled, hitting Milland’s head with his small fist.<br><br>A human being has scammed the demon king! The one that lost his soul wasn’t this bastard, it was the King of Essence and that stupid Sloth!<br><br>Even though they couldn’t hear him, Wrath kept shouting and hovered around the officers’ heads.<br><br>“There’s a saying on the battlefield. Sword for sword, blood for blood, and life for life.”<br><br>An auspicious light was reflected in Milland’s eyes.<br><br>“Since you sacrificed your soul and body to the demon king in order to save us, we shall pay you back accordingly.”<br><br>“Of course we shall!”<br><br>“Obviously!”<br><br>The officers nodded in agreement.<br><br>Kuaaah! I’m so frustrated that it’s killing me! This bastard just benefited from the demon kings by scamming them! Come back to your senses!<br><br>No matter how much Wrath screamed and struggled, the officers’ respect didn’t stop.<br><br>This feels like a sweet potato is blocking my throat. I-If only I could say something, I’ll trade a part of my soul for it! Please! Let me say something!<br><br>He stretched his face with his hand, screaming that he was dying.<br><br>Milland and the officers walked in front of the table, facing Raon head on.<br><br> <br><br>Thud!<br><br> <br><br>They knocked the left side of their chests, where their hearts were located, with their right hands. Then they straightened their backs. It was the battlefield’s expression of respect and praise of the highest degree.<br><br>“We—no, Habun Castle will support you, Raon Zieghart!”<br><br>“Ah…”<br><br>Raon swallowed harshly, his mouth dry. Goosebumps appeared at the sight of the seriousness in everyone’s eyes.<br><br>Keuh…<br><br>On the other hand, Wrath went limp like a flat balloon and shook his head.<br><br>What a shitty world. I should just die. Yes, I need to die so I won’t see them anymore…</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0145.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0147.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0001.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0001.html">
+                                    <h4 class="text-body">Chapter 0001</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0002.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0002.html">
+                                    <h4 class="text-body">Chapter 0002</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0003.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0003.html">
+                                    <h4 class="text-body">Chapter 0003</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="../../assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+<script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 's7qnzqxhqf',
+    });
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 142</h3>
+        <p>“This is pretty much a second wave.”<br><br>Milland clenched his fist, watching the blue and yellow wave rushing towards Habun Castle.<br><br>“Issue the wave-grade combat alert! Gather all the swordsmen and soldiers on standby!”<br><br>His majestic voice resounded throughout the castle walls.<br><br>“Open the armory, prepare to fight!”<br><br>Upon receiving Milland’s quick and precise orders, the scouts that had been staring at the monsters began to hurriedly run down the castle walls.<br><br> <br><br>Ding! Ding! Ding! Ding! Ding!<br><br> <br><br>The bell rang just like during the wave, to alert the entire castle.<br><br>“Wh-What?”<br><br>“What’s going on now?”<br><br>“Damn it! How many disasters are going to happen this year?”<br><br>“Shut up and move! They are going to be here at any moment!”<br><br>“The armory is open, take the weapons first!”<br><br>Upon hearing the alarm, the swordsmen and soldiers came out from their lodgings and training grounds to move into positions.<br><br>“Radin.”<br><br>Milland waved his hand at Radin, who was biting his lip.<br><br>“Were you the last one to scout?”<br><br>“Yes, I went to scout three days ago.”<br><br>“Was there any sign of this attack?”<br><br>“Just like in the report, nothing significant was found.<br><br>“Which means it might be Eden's doing once again. After all, they have the ability to control the monsters.”<br><br>Milland looked at Raon to ask for his agreement.<br><br>“It’s just my opinion, but I think that’s not the case this time.”<br><br>Raon shook his head, looking down from the castle walls.<br><br>“Is it not?”<br><br>“No. Eden is infamous for their stupidity, but they aren’t foolish enough to repeat a method they’ve failed before. And…”<br><br>He raised his finger to point at the monsters dashing towards them.<br><br>“The monsters look different than usual. They aren’t filled with the desire to kill or exuding madness. Don’t they look like they are running from something instead?”<br><br>“I also had that impression, and that’s why I thought it was Eden’s doing.”<br><br>Milland sighed, caressing his scabbard.<br><br>“Regardless of the reason, it will be a difficult fight once again.”<br><br>“That seems to be the case.”<br><br>Haa.<br><br>The moment Raon nodded, Wrath rose from the ice flower bracelet like an ember. <br><br>He is finally coming.<br><br>He wasn’t looking at the monsters in front of them, but much further away at the distant Stallin Mountain.<br><br>‘What’s coming?’<br><br>The King of Essence told you before that there was a sleepyhead. That damn bastard finally woke up.<br><br>Wrath’s blue eyes were blazing like a demon’s. Raon couldn’t tell whether he looked happy, angry, or excited.<br><br>‘You mean, when you told me to run away a month ago?’<br><br>Yes. The one I mentioned back then is finally awake. He probably woke up when the doppelganger exploded.<br><br>‘Is he a dragon or something?’<br><br>Raon followed Wrath’s gaze to look at Stallin Mountain, but he still couldn’t feel anything. He just felt slightly anxious.<br><br>Dragon? You are completely mistaken.<br><br>Wrath snorted, waving his small hand.<br><br>‘Then what? I need to know what it is to decide whether I should run away.’<br><br>It’s too late already. You had a chance when he was still sleepy, but he has already targeted you guys now.<br><br>‘What?’<br><br>Raon got goosebumps throughout his body upon hearing that.<br><br>He won’t stop until he destroys this castle and kills every single one of you. Although, he might stop if you offer an appropriate sacrifice.<br><br>‘Sacrifice? What sacrifice? Who the hell is coming?’<br><br>Raon picked Wrath up by his head. His face was brimming with an unusually carefree smile.<br><br>You shall witness with your own eyes. The King of Essence has no reason to tell you.<br><br>‘You…’<br><br>I told you that this bet will end with the King of Essence’s victory. The King of Essence shall take over your body this time, since it has come to this.<br><br>Wrath was certain that whatever was coming down from the mountain was going to annihilate the castle.<br><br>“Haa…”<br><br>Raon exhaled deeply. There were a few existences he could guess from Wrath’s reaction, but he didn’t mention them since it didn’t seem like Wrath was going to tell him.<br><br>“Line up!”<br><br>“The pikemen and infantry shall line up in front of the castle walls! The archers that don’t have places shall stand under the wall!”<br><br>The soldiers and swordsmen that managed to finish their preparations were standing in their positions, nervously watching the monsters swarming towards them.<br><br>“Haa. Damn it…”<br><br>“I heard this was my unlucky year…”<br><br>“This is so shitty. Holy shit!”<br><br>The soldiers’ lips were trembling as they watched the monsters rushing forward like the brutal wind of the desert.<br><br>“Don’t worry about them too much. We have the commander and Sir Raon!”<br><br>“I guess. After all, the casualties have decreased drastically since Sir Raon has arrived.”<br><br>“He was the ice troll slayer, and now he is the doppelganger slayer. He is writing history right here.”<br><br>“It’s not just about might, he also has an admirable mentality.”<br><br>The swordsmen and soldiers looked at Raon and smiled slightly. Their expressions were filled with trust, which was difficult to bear in his current condition.<br><br>“Commander.”<br><br>Raon walked up to Milland, a bitter taste in his mouth. Milland’s gaze was also filled with trust as he looked at him.<br><br>“Just in case, if an enemy that’s difficult to win against appears, what are you planning to do?”<br><br>He created an energy layer to cover around him and Milland so that other people couldn’t hear them.<br><br>“It’s not like you to ask such a question.”<br><br>Milland’s expression didn’t change at all, as if he were wearing a mask. He tapped on his scabbard, maintaining his confident appearance.<br><br>“I’ll still fight. There are countless civilian villages behind this castle. Even if all we can do is to buy some time, I’ll fight until the end to reduce the casualties. That’s the reason Habun Castle exists.”<br><br>“…I see.”<br><br>Raon bit his lip. It would’ve been a different story if he knew a dragon was coming, but since he didn’t know what was coming towards them, he couldn’t even try to convince him.<br><br>‘I have to meet him in the end.’<br><br>Raon caught his breath, resolving to kill it no matter what it was.<br><br>Hmm.<br><br>Wrath nodded, with a completely laid-back expression.<br><br>Don’t worry. The King of Essence will make sure to save the pineapple girl.<br><br>‘Shut up.’<br><br>Raon pushed away Wrath, who looked too happy, and stood in his assigned position.<br><br>What Wrath said was true. Something too powerful for them was coming towards them.<br><br>However…<br><br>“Sir Raon, I believe in you!”<br><br>“Please do your best today!”<br><br>“I’ll shoot arrows until my fingers are pulled out, so leave your back to us!”<br><br>He could feel the soldiers and swordsmen that were encouraged from watching his back. There was no way he could betray their expectations and run away alone.<br><br>‘Being relied on isn’t exactly a good thing.’<br><br>It seemed receiving people’s trust and expectations was giving him more responsibility than the joy it brought him. It was an emotion he could never have known when he was an assassin.<br><br>‘I’m learning all kinds of things because of this damn guy.’<br><br>Raon glared at Wrath and clasped his scabbard.<br><br>“Uah, I’m done. I’m dead!”<br><br>Dorian’s voice was half crying as he took out a bunch of logs and boulders from his belly pocket. It looked like he was planning to throw them when the monsters started climbing the castle wall.<br><br>“Everyone, prepare for battle!”<br><br>“Prepare for battle!”<br><br>Milland drew his sword and ordered the preparations for the last time. The soldiers repeated his order and slammed the ground with their spears.<br><br>“Raon.”<br><br>He turned his head and called for Raon. Everyone’s gazes were focused on him.<br><br>“I’ll leave the battle speech to you.”<br><br>The battle speech is something that was said before starting a battle in order to raise morale. Milland had been in charge of it so far, and he was saying that he would leave it to Raon for the first time.<br><br>“Why me…?”<br><br>“Because I figured your speech would have a better effect than mine.”<br><br>Milland pointed at the soldiers with his chin. The blood boiled in his heart, facing the soldiers’ trusting gazes.<br><br>‘Battle speech…’<br><br>Because of how he’d been living, he wasn’t exactly good with speeches, but there was one thing he wanted.<br><br>Raon turned around. Facing the gazes of the entirety of Habun Castle, he smiled lightly.<br><br>“Survive, everyone!”<br><br>That dull speech was coming from the bottom of his heart.<br><br>“I-Is that all?”<br><br>“Your speech is worse than I thought.”<br><br>Dorian’s mouth became wide open, and Beto snickered.<br><br>“Hmm…”<br><br>“I like it since it was really manly.”<br><br>Edquill was just staring at him, and Terian gently nodded.<br><br>“I like how simple that was.”<br><br>“That’s true, the commander’s speech is way too long.”<br><br>“I thought he was the headmaster when I first heard his speech.”<br><br>The knights and soldiers burst into laughter. The fear and anxiety right before the battle disappeared into the wind, and the morale was raised to pierce through the sky.<br><br>“A single swordsman managed to raise the soldiers’ morale to the maximum.”<br><br>Milland’s mouth slightly curved into a smile.<br><br>“This is your current position. People trust you more than the commander right now.”<br><br>“I just…”<br><br>“I’ll ask you again today. Please save many soldiers.”<br><br>Milland stopped smiling and raised his hand towards the sky. The moment his hand was clenched into a fist, the third war started.<br><br> <br><br>* * *<br><br> <br><br>“Fire!”<br><br>The bundle of silver arrows carried their will for survival to draw an arc and pierce through the monsters’ skins.<br><br>“Kieea!”<br><br>“Kuaaa!”<br><br>“Kieee!”<br><br>However, the monsters didn’t stop. Their eyes distorted and they dashed towards the castle walls, just like provoked dragons.<br><br>“Fire!”<br><br>Hundreds of arrows fell down, one after the other, at Milland’s order. Countless monsters collapsed on the ground, but an even larger number of them slammed towards the castle with their lives on the line.<br><br> <br><br>Slaam!<br><br> <br><br>Once the monsters slammed the castle with their bodies at the same time, the castle shook like it was about to be destroyed.<br><br>“They are climbing! Prepare for a close quarter fighting!”<br><br>“Throw the rocks and logs first!”<br><br>“Eeyaaa!”<br><br>With Dorian as their lead, the soldiers threw the rocks and logs to crush the climbing orcs, trolls, and Krates. The pikemen kept stabbing towards them, and the archers continuously pulled their bowstrings.<br><br>The blade reflecting the yellow light of the sunset was incorporating a powerful morale, but the monsters didn’t withdraw. They kept climbing the castle walls single-mindedly, trying to cross them no matter what.<br><br>Raon bit his lip, looking into the monsters’ eyes.<br><br>‘I knew it.’<br><br>Their eyes were filled with terror. He wasn’t mistaken about them. The monsters’ goal wasn’t to feast nor to attack, and they just wanted to cross the castle walls and run away.<br><br>“Kuaaah!”<br><br>The first one to climb the wall was an ogre. With its tremendous jumping strength, it only leaped twice before landing on the castle wall.<br><br>“Eek!”<br><br>“Gasp!”<br><br>As the soldiers were stepping back, terrified by the ogre’s roar and murderous intent, Raon made his move. He cut off the ogre’s arm in a single strike when it was trying to smash a soldier’s head.<br><br>“Kuaaah!”<br><br>The ogre didn’t try to retaliate, kicking the ground once again. It was trying to jump down from the wall, but Raon obviously didn’t allow it to do so. The slash reached it like a ray of light, decapitating the ogre.<br><br>“Kuaaah!”<br><br>“Kieeee!”<br><br>The trolls and shark moles followed it to climb the castle like a swarm of ants. Raon covered the walls with Glacier to help the soldiers in a crisis, slaying the monsters.<br><br>“Kieee!”<br><br>A shark sting came up, destroying a portion of the castle wall. The spikes protruding from its entire body were trembling like arrows on a bowstring. <br><br>“Gasp!”<br><br>“I-It’s a shark sting!”<br><br>“The spikes are coming!”<br><br>“Hiee!”<br><br>The moment the spikes burrowed into it slightly to prepare for the shot, its head was sent flying and Raon appeared from behind it.<br><br>“Th-Thank you.”<br><br>“Sir Raon!”<br><br>The soldiers thanked him from the ground, and Raon looked over the walls.<br><br>‘Are the animals coming as well?’<br><br>Behind the monsters swarming towards them, he could see the wild animals living around Stallin Mountain. His hair stood on end at the sight of the animals running away, since they didn’t do anything during the wave.<br><br>“Hmm…”<br><br>Milland bit his lip upon seeing the same thing as him. It seemed he was also astonished by the situation, despite having spent his entire life in the castle.<br><br>“Terian!”<br><br>“Yes!”<br><br>Vice-commander Terian knelt to answer his call.<br><br>“Send the scouts to evacuate the villages behind the castle! Evacuate the civilians and everyone inside the castle as well!”<br><br>“What?”<br><br>Terian’s eyes widened, as he didn’t expect that order at all.<br><br>“Quickly!”<br><br>“U-Understood!”<br><br>Terian swallowed harshly and ran down the walls to give the orders to the scouts.<br><br>‘I knew it.’<br><br>It seemed he clearly realized how serious the situation was, even worse than a wave. Though, he didn’t seem to have any intention of running away.<br><br>While Raon was licking his lips, a huge diamond shaped shadow covered the castle walls.<br><br>“It’s a Mantakurn!”<br><br>“There are two of them! They are coming from both sides!”<br><br>Just as the soldiers said, two huge ray monsters were flying towards them.<br><br>Raon and Milland made their moves at the same time. They swung their swords towards the Mantakurn on the left and right side respectively. The two blades burst into flames of two different colors.<br><br> <br><br>Whaaam!<br><br> <br><br>The two Mantakurns were split into half and fell down on the monsters climbing the wall. The ground trembled like an earthquake, and the battle paused for an instant.<br><br>Raon met Milland’s eyes. His wrinkled old eyes smoothly curved into an arc, before sending an aura message.<br><br>[If it ever gets too dangerous, you should withdraw.]<br><br>[What? What do you…?]<br><br>[I finally understand what you meant earlier. You looked even further than me.]<br><br>He continued, slaying a horde of orcs.<br><br>[You can reach even higher as a warrior. You shouldn’t waste your life here. Think about the future.]<br><br>With that as his final words, he turned his head. He never looked back at him after that.<br><br>‘Is he telling me to run away?’<br><br>Raon looked back. The gazes of trust and conviction were lighting up the darkness. He would’ve already run if he wanted to save himself.<br><br> <br><br>Slaam!<br><br> <br><br>He grit his teeth and thrust his sword. The yellow light of sunset reflected at the point of his blade extended like a spark to cut through a troll’s neck surrounding the castle.<br><br>“I can’t run away by myself.”<br><br>Raon’s deadly eyes were directed at Wrath, who was laughing leisurely.<br><br>‘And I won’t lose to you, either.’<br><br>A meaningless struggle?<br><br>‘We will see if it’s meaningless or not.’<br><br>I can already see you kneeling in astonishment.<br><br>‘Even if I have to kneel, I’ll save their lives.’<br><br>Under the yellow moonlight, the red and blue gazes collided with each other.<br><br> <br><br>* * *<br><br> <br><br>The castle defense continued until the next sunrise.<br><br>Since the battle could be called a fight of life and death, the soldiers on the castle walls were out of breath and the strength had already left their limbs.<br><br>However, they kept thrusting their spears and swords with the determination and resolution to protect the castle.<br><br>“It’s almost over!”<br><br>“Do your best until the end!”<br><br>“Hold out! Trust the allies behind you!”<br><br>Whether they were officers or soldiers, they kept shouting as they wielded their weapons until the end. Their morale was like a raging fire, and the monster wave finally started to subside. The end was near.<br><br>“There are only a few of them left!”<br><br>“It’s our victory once the sun rises!”<br><br>“Woaaah!”<br><br>Since the number of monsters had clearly been reduced compared to the day before, the strength returned to the soldiers’ eyes.<br><br>“Kieee!”<br><br>“Kraaa!”<br><br>However, the monsters’ actions were also unusual. Although their number had visibly decreased, they didn’t run away. Instead, they became more desperate while climbing the castle walls. Of course, their careless climbing only resulted in them losing their lives in vain.<br><br>“Why are they acting like this?”<br><br>“They should be running away by now.”<br><br>“Why is the sun not rising?”<br><br>“Huh? Now that I think about it, it’s way past the time for the sunrise!”<br><br>The soldiers frowned upon realizing that the monsters and the current situation weren't normal.<br><br>“Ah…”<br><br>Raon’s eyes widened.<br><br>‘Did they just say the sun isn’t rising?’<br><br>The sky was still dark, as if the night had been extended.<br><br>The moment he realized that fact, a man raised the curtain of the night and walked towards them.<br><br>Upon witnessing the three horns rising from his forehead and temples, Raon found that he couldn’t breathe, as if he were facing the abyss.<br><br>“Haa…”<br><br>He was still far away. His voice shouldn’t be able to reach him, yet he could hear it.<br><br>“It’s cold… I’m sleepy… It’s annoying… But I woke up…”<br><br>Opening his mouth, which had turned pale from the cold, he raised his head. Those black eyes absorbed the light, and once Raon met those eyes he felt like his soul was being shattered.<br><br>How could someone like that exist?<br><br>Sensing the death spreading from him, Raon felt like he was going insane. It was the appearance of a demon king. The incarnation of evil was targeting them.<br><br>“It’s cold… I barely managed to fall asleep… Yet I woke up again… It’s annoying…”<br><br>Murmuring something that he couldn’t understand, he trampled on the white night. It looked like every light in the world was being devoured by him.<br><br>‘Is that him? The sleepyhead that you were talking about?’<br><br>Raon grit his teeth and looked down at the flower bracelet.<br><br>You finally realized it.<br><br>An eerie coldness was thrashing inside Wrath’s eyes.<br><br>That slug’s name is the Receiving One, Sloth.<br><br>He twisted his lips, looking at the monster he called Sloth.<br><br>He is the monarch of ‘Sloth’, who reached the same rank as the King of Essence.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0141.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0143.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0001.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0001.html">
+                                    <h4 class="text-body">Chapter 0001</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0002.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0002.html">
+                                    <h4 class="text-body">Chapter 0002</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0003.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0003.html">
+                                    <h4 class="text-body">Chapter 0003</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+</body>
+
+</html>
