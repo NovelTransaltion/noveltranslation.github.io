@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="../../assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+<script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 's7qnzqxhqf',
+    });
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 134</h3>
+        <p>Dorian immediately ran out of the scout's quarters to climb the central tower, which was the tallest building in Habun Castle.<br><br>“Huh? Dorian?”<br><br>“Why did you come here?”<br><br>The eyes of the guards, who were keeping watch at the highest floor of the tower, widened.<br><br>“W-We don’t have time for that!”<br><br>Dorian shook his head and ran towards the alarming bell to strike it.<br><br> <br><br>Ding! Ding! Ding! Ding! Ding!<br><br> <br><br>The bell rang five times in no time, and the highest level of alert was activated, which was the same level as the waves.<br><br>“A-Are you crazy?”<br><br>“God damn it!”<br><br>The guards tried to pull Dorian’s arm, but it was already too late. The soldiers that were resting or sleeping came running towards the central tower.<br><br>“Wh-What’s going on?”<br><br>“Why did you ring the alarm? What’s happening?”<br><br>“Five times means that it’s a wave!”<br><br>“That’s Dorian! Why are you over there?”<br><br>The soldiers’ eyes widened upon finding Dorian ringing the alarming bell.<br><br>“Monsters! The monsters are swarming from the west!”<br><br>Dorian repeated what Raon told him, as he kept ringing the bell.<br><br>“”Monsters? What kind of nonsense is that?”<br><br>“Why the hell would there be monsters in the west?”<br><br>“You idiot! All the monsters in the surroundings submitted to the lord!”<br><br>“Did you have a nightmare or something? Come down from there already!”<br><br>The Snow Strikers and the soldiers gestured for him to come down while cursing at him.<br><br>“Dorian!”<br><br>“Stop it right now!”<br><br>“Sir Raon!”<br><br>While the guards were trying to stop him, Dorian opened his mouth once again.<br><br>“Sir Raon said it! He said the monsters are coming from the west! There aren’t as many as the wave, but there are a lot of them!”<br><br>“Gasp! Sir Raon did?”<br><br>“If it’s him, then i-it’s possible.”<br><br>“It’s not just possible, it’s a fact!”<br><br>“Move quickly!”<br><br>“Prepare to defend!”<br><br>“Ring the alarm again!”<br><br>The soldiers and Snow Strikers swallowed hard and immediately started moving as soon as they heard Raon’s name.<br><br>“Monsters? What kind of monsters are you talking about?”<br><br>Terian, who came out late, yelled at him.<br><br>“Yes, what monsters are there? We need to prepare differently depending on their kind.”<br><br>“Just like the wave, they are a mixture of trolls, orcs, and ocean monsters. And…”<br><br>Dorian caught his breath and continued.<br><br>“He said there are two demons of Eden among them!”<br><br>“E-Eden? The Eden of the Five Demons?”<br><br>“Are you saying that those crazy bastards are attacking us right now?”<br><br>“That’s impossible! There’s no reason for them to be here!”<br><br>“Bullshit!”<br><br>The soldiers’ jaws dropped. Even though they could believe that monsters were attacking, they shook their heads in disbelief upon hearing that Eden was coming.<br><br>“Argh, seriously! It’s not me, but Sir Raon that said it! He is the one that said Eden is coming, too!”<br><br>“Then it must be true. Prepare for battle! Open the armory!”<br><br>As soon as Dorian mentioned Raon’s name, Terian ordered them to prepare to fight without any hesitation.<br><br>“If Raon said it, then it must be true! Move quickly!”<br><br>“Eden is coming! Prepare the defenses faster!”<br><br>“Take the spears and swords, line them up on the castle walls!”<br><br>“Boil the oil, prepare boulders and logs! Lay out the arrows on the ground!”<br><br>The soldiers also started moving quickly, no longer doubting him upon hearing that it was Raon that said it.<br><br>“……”<br><br>Dorian wrinkled his nose as he watched the soldiers and swordsmen spreading out in all directions.<br><br>‘I wanna go home.’<br><br>It was irritating to see people that didn’t trust him at all start moving as soon as he mentioned Raon’s name.<br><br>‘It can’t be helped.’<br><br>Hiding his sorrow, he climbed the castle walls. Raon’s pressure felt like flowing water as he glared towards the west.<br><br>“Hmm…”<br><br>Dorian swallowed harshly. Watching Raon standing on the castle gate made his anxiousness disappear, just like when Milland was holding the ground.<br><br>‘Is he a real monster?’<br><br>Even his weak self could feel it. Raon had progressed once again. Dorian’s breath was unconsciously filled with surprise.<br><br>Thanks to Raon’s quick instruction, Habun Castle was ready to fight before the enemies arrived.<br><br>The infantry and pikemen were on the castle walls with the archers and the Snow Strikers behind them, just like during the wave.<br><br>“Hmm.”<br><br>Dorian licked his lips, turning to look behind him.<br><br>‘It’s strange.’<br><br>He thought the Snow Strikers leader, Edquill, would say something to Raon since Terian wasn’t there—he was preparing the defenses—but Edquill was actually more docile than the soldiers.<br><br>He was just staring to the west, as if he trusted what Raon said. Dorian realized once again that Raon’s presence surpassed his imagination, since he was capable of changing someone as vulgar as Edquill.<br><br> <br><br>Whir!<br><br> <br><br>Raon’s pressure suddenly changed as he stared to the west. The flow of aura that used to be smooth like a stream became a fierce tidal wave and soared.<br><br>“They are coming.”<br><br>Dorian looked to the west upon hearing his low voice. The thin forest was collapsing and the monsters were swarming like a landslide.<br><br>In the middle of the green and blue wave, there were two monster men wearing ghastly masks and helmets. They were the Blue Shamanic Demon and the Voracious Ice Demon, who were the puppets of Eden.<br><br>“I-It was true.”<br><br>“Eden really is here!”<br><br>“The B-Blue Shamanic Demon…”<br><br>“That’s the Voracious Ice Demon!”<br><br>“Ugh…”<br><br>Upon witnessing the Eden’s demons and the advance of monsters even fiercer than the wave, the soldiers were agitated and their morale wavered.<br><br>“W-Wait! That’s a lord behind them! The ice troll lord!”<br><br>“Is the lord actually here?”<br><br>“I-It was a trap! What can we…”<br><br>“Fire the flare.”<br><br>Hearing Raon’s composed voice, the soldiers stopped trembling for a moment. The soldier behind him shot two flares to the sky.<br><br> <br><br>Boom, boom!<br><br> <br><br>The darkness faded, and the monster's distorted pressure and brutal faces came into sight.<br><br>“Since we don’t have time to make a plan, we will proceed the same way as the last time.”<br><br>Raon moved towards the right side of the castle walls, where the repair hadn’t yet finished.<br><br>“Sorry?”<br><br>“What does that mean?”<br><br>“I’ll stop them from down there, so support me from up here.”<br><br>“S-Sir Raon!”<br><br>Dorian extended his hand to try to stop him, but Raon was already falling down.<br><br>“Gasp!”<br><br>“I-Is he doing that again?”<br><br>“Seriously?”<br><br>“Raon…”<br><br>“Sir Raon!”<br><br>Admiration and astonishment filled the eyes of the soldiers and the Snow Strikers swordsmen. There were even soldiers that were shivering in excitement.<br><br> <br><br>Thud!<br><br> <br><br>With Raon defending the castle walls like a giant god, the morale that was repressed by fear soared up to reach the sky.<br><br>“Sir Raon.”<br><br>Dorian clenched his fist, watching Raon emanating enormous pressure.<br><br>Edquill, who was standing next to him, was also biting his lip as he stared at Raon’s back.<br><br> <br><br>* * *<br><br> <br><br>Raon caught his breath, looking at Eden’s demons and monsters dashing at him.<br><br>‘It’s about 80 percent.’<br><br>Since he hadn't finished recovering yet, he could only use about 80 percent of his power. However, he could certainly tell that he was currently stronger than before the wave, thanks to the huge growth he got during it.<br><br>‘But it might be a bit difficult to stop them on my own.’<br><br>There was the Blue Shamanic Demon, the Voracious Ice Demon, and even an ice troll lord. It was difficult for him to fight against the three of them, and that was without including the monsters behind them.<br><br>‘But I still need to do it.’<br><br>A warrior became stronger by overcoming difficult battles and harsh crises. Feeling his pounding heart, Raon used the Ten Thousand Flames Cultivation.<br><br>“For you to be here—it must be my lucky day!”<br><br>The Voracious Ice Demon kicked the ground. He pierced through the space in no time to slam his blade down. It was an attack that contained powerful combative energy and sharpness all at once.<br><br> <br><br>Thud!<br><br> <br><br>Raon stomped the ground. He mixed the Fangs of Insanity’s principles with the energy surging up. The strike stretched like a ray of light to fend off the Voracious Ice Demon’s blade.<br><br> <br><br>Clang!<br><br> <br><br>Along with a thunderous noise of metals being crushed, the Voracious Ice Demon faltered and bounced off.<br><br>“Y-You bastard!”<br><br>His confused eyes trembled violently inside his helmet.<br><br> <br><br>Whoosh!<br><br> <br><br>Ice shards hailed down from the sky. It was the ice spell used by the Blue Shamanic Demon. The temperature became lower, and the ice shards attacked him at an abnormal angle.<br><br>“Haa.”<br><br>Raon controlled his breath to blossom a crimson flower on his blade.<br><br>Ten Thousand Flames Cultivation, Flame Spirit.<br><br>The crimson flower petals flickered, fluttering through the air to melt the ice and cut off the line of Blue Shamanic Demon’s spell. It was a wave of power created by the resonating Ring of Fire.<br><br>“What is this…?!”<br><br>The Blue Shamanic Demon’s mask trembled violently, shocked by his spell being destroyed. Since he couldn’t move his body for a moment, Raon was about to run towards him while aiming for his neck. A tremendous amount of combative energy burst from his right side.<br><br>“Kraaa!”<br><br>The ice troll lord was running at him like a bison. The axe containing an enormous combative energy was hammered down on his head.<br><br> <br><br>Thud!<br><br> <br><br>Raon used the Supreme Harmony Steps. His shape grew blurry like the night shadow, only to reappear one step behind as he swung his sword upward.<br><br>“Krr!”<br><br>Even though it hadn’t finished growing, it was still a lord. It turned its axe in that instant to get into a perfect defensive posture.<br><br> <br><br>Clang!<br><br> <br><br>The collision between two powers created a shockwave, severing the land that was filled with darkness.<br><br>“Haa!”<br><br>Raon grit his teeth and used the Fangs of Insanity. The brutal blade sensed the smell of opening to fend off the ice troll lord’s axe.<br><br> <br><br>Thud!<br><br> <br><br>The ice troll lord was pushed back into the horde of orcs behind him. Squashing six orcs under him, he turned them into a bloodbath.<br><br> <br><br>Whir.<br><br> <br><br>Raon lowered his sword, white dust rising to the air.<br><br>Three times.<br><br>That was the number of swings he made to stop hundreds of monsters and two demons of Eden.<br><br>Witnessing that overwhelming power, the people in the castle and the monsters under it could only blink their eyes in amazement.<br><br>“I’ll be disappointed if that’s all you’ve got.”<br><br>Raon smiled faintly and brandished his sword. The energy flowing from the silver blade encroached through the space.<br><br>You are just bluffing while straining yourself.<br><br>Wrath sneered.<br><br>‘That’s true, but…’<br><br>Raon snickered.<br><br>‘I just need to block the front.’<br><br>He raised his left hand. Arrows and bolts pierced through the peaceful moonlight to decorate the sky.<br><br> <br><br>Pow! Pow!<br><br> <br><br>The monsters that got hit by the arrows collapsed or knelt, one after the other.<br><br>“Shoot them again!”<br><br>Terian’s gallant voice could be heard, and hundreds of silver arrows fell once again. The number of monsters that collapsed was even bigger than the last time.<br><br>“How do you feel about being ambushed in return?”<br><br>“How did you know we were coming?”<br><br>“I have good intuition.”<br><br>Raon furrowed his brows, looking at the Blue Shamanic Demon and the Voracious Ice Demon.<br><br>“That was a pretty good trap, because I completely fell for it. However…”<br><br>He pointed at the flare fading away and continued.<br><br>“That’s signaling the danger. The commander will be back before tomorrow morning. And I only need to stop you until then.”<br><br>“Voracious Ice Demon, you were right this time.”<br><br>An energy that was gloomy enough to make his hair stand on end creeped from the Blue Shamanic Demon’s mask.<br><br>“We have to kill him right now.”<br><br>“Kill? You aren’t capable of that.”<br><br>“La Tia!”<br><br>The Blue Shamanic Demon slammed his staff down and chanted.<br><br>“Krrrr!”<br><br>“Kieee!”<br><br>The monsters that were on death’s door after getting hit by the arrows stood back up, their eyes shining red. They showed off their yellow teeth, flesh stuck between them, with a pressure even more brutal than before.<br><br>“The plan is changed. He is our highest priority. Kill him!”<br><br>“Oh, wow.”<br><br>The Voracious Ice Demon walked up to him, giggling, upon hearing the Blue Shamanic Demon’s order.<br><br>“I can’t believe you got even stronger than the last time. You are a real monster, huh?”<br><br>Combative energy surrounded him as his deadly eyes glared at him. It looked like the northern sea’s rough and cold waves were encircling him.<br><br>“You heard him, right? He told me to kill you, first!”<br><br>The Voracious Ice Demon’s energy exploded from him and rushed at Raon. The shark sting helmet grew bigger in an instant, making him overwhelmingly faster than before.<br><br>Raon used Glacier in return. Reading his movement through the ocean of perception, he swung his sword.<br><br> <br><br>Clang!<br><br> <br><br>The collision between the fin blade and the sword created a thunderous noise, trembling the ground at the base.<br><br>The Voracious Ice Demon forced his way through with power. It was a tremendous power that felt like facing the great ocean’s tidal wave with a naked body.<br><br> <br><br>Slam!<br><br> <br><br>Raon used the Ten Thousand Flames Cultivation to the extreme and hacked with the Fangs of Insanity. The moment he fended off the Voracious Ice Demon’s blade, he twisted his body like a shark to target Raon’s neck with its spike.<br><br>“Die!”<br><br>“You die.”<br><br>Right before the spike reached his neck, Raon’s left hand moved like lightning. He drew the Blade of Requiem from behind his waist to slash him right away.<br><br> <br><br>Slash!<br><br> <br><br>The blade of ghastly energy cut through the armor and tasted red blood.<br><br>“This wound is nothing!”<br><br>The Voracious Ice Demon didn’t withdraw. As expected of a demon with the ferocious Shark Sting’s characteristic, he showed his teeth to rush at him once again.<br><br>“I’ll cut you as it is.”<br><br>Raon’s eyes shone with a frightening light and he pulled his sword back. As he was about to flash his sword, his sight was filled with white fur. It was the ice troll lord, who had recovered from its injuries.<br><br>Huge snowballs were falling from his right side, enough to cover his sight. They were the snowstorm created by the Blue Shamanic Demon. Unlike the ice troll shaman’s spell, it looked powerful enough for a single snowball to break his bones.<br><br> <br><br>Slaam! Slam!<br><br> <br><br>In the midst of a pouring snowstorm, Raon dodged the ice troll lord’s attack and deflected the Voracious Ice Demon’s blade.<br><br>‘Haa!’<br><br>Since the Voracious Ice Demon and the Blue Shamanic Demon both possessed power surpassing an advanced level Expert, adding the ice troll lord with overwhelming physical abilities on top of them was making him feel like death. A cold sweat ran down his spine.<br><br>You deserve it after the way you ran in like an idiot.<br><br>‘Shut up.’<br><br>Ignoring Wrath making fun of him, he swung his sword.<br><br>Ten Thousand Flames Cultivation, Ten Flames.<br><br>Revolving Sky.<br><br>The sawtooth of flame rotated to shred the Voracious Ice Demon’s blade and the ice troll lord’s waist to pieces. As he was about to keep advancing, the Blue Shamanic Demon created a wall of ice to stop him from moving.<br><br>“Tsk.”<br><br>That kept happening. That kind of interruption was stopping him from finishing them off.<br><br>‘The monsters are also problematic.’<br><br>Even the normal monsters were engulfed in madness as they tried to break through the castle walls. He couldn’t allow himself to be careless for a single moment.<br><br>‘If only one of the three wasn’t here…’<br><br>As he was bitterly licking his lips, he could hear the sound of two people jumping down from the castle walls. When he looked around, he saw the trembling Dorian and Edquill, who was biting his lip.<br><br>“Dorian? And you are…”<br><br>“I-I’ll take care of the lord!”<br><br>“You shall fight the two of them.”<br><br>Dorian took out a black rock and a white rock from his belly pocket.<br><br>“I can’t let you fight alone two times in a row!”<br><br>He struck the two rocks like flints, then threw them towards the lord.<br><br> <br><br>Baam!<br><br> <br><br>The rocks exploded and the white smoke emerging from it covered the ice troll lord and the monsters.<br><br>“Let’s go!”<br><br>“Alright.”<br><br>Dorian and Edquill wore some strange eyepatches and went into the smoke.<br><br>Huh, I never thought he would be useful one day.<br><br>‘Me, either.’<br><br>Raon smiled faintly and turned around. He could see the Blue Shamanic Demon and the Voracious Ice Demon furrowing their brows.<br><br>“I’m sorry, but I’m going to end this quickly.”<br><br>He pointed his sword at the two demons.<br><br>“I admit that you are powerful. That’s not a swordsmanship and reaction one can have at your age. However, you are looking down on us too much.”<br><br>The Blue Shamanic Demon’s mouth curved into a demonic smile.<br><br>“We aren’t your average monsters.”<br><br> <br><br>* * *<br><br> <br><br>The Voracious Ice Demon lowered his posture while glaring at Raon. Standing on four limbs like a wolf, he raised his head.<br><br>He controlled the combative energy covering his entire body, bringing forth all the coldness of the Northern Ocean that was encircling his heart.<br><br>“Freeze to death!”<br><br>His mouth split wide open, like a shark swallowing its prey. Extreme coldness poured from its dark throat. It was the shark sting’s ability, Ice Breath.<br><br> <br><br>Creak!<br><br> <br><br>The pure white ice froze the fissured ground in an instant and engulfed Raon. The tremendous wave of ice was powerful enough to create a spiky wall of ice behind him.<br><br>“He is done. Now…huh?”<br><br>The Voracious Ice Demon, who was about to stand up after wiping his mouth, was petrified like a plaster figure.<br><br>Raon was reflected in his trembling pupil. He couldn’t believe his eyes. It was impossible to stay uninjured like that after facing Ice Breath head-on.<br><br>“Wh-What?”<br><br>The Voracious Ice Demon’s entire body started trembling, as if he were having a stroke.<br><br>“How did you survive the Ice Breath…?”<br><br>The Ice Breath was a special technique that combined combative energy and ice. Since it was impossible to endure it by normal means, he couldn’t understand how he remained spotless like that.<br><br>“Move aside, I’ll do it. Cardirartin!”<br><br>The Blue Shamanic Demon slammed down his staff and chanted. The snowstorm around Habun Castle was reduced in range to focus on Raon, and the color changed to an ominous yellow.<br><br>It was the Snowflake of the Yellow Lotus, a spell that targeted the mind. Since it inflicted frostbite on the mind instead of the body, it was impossible to endure even with a strong resistance to ice.<br><br>“Huh?”<br><br>Even though it was a brutal storm curse, the man standing inside was standing confidently, pointing his blade towards the sky.<br><br> <br><br>Baam!<br><br> <br><br>The crimson blade fell like lightning, ripping the cursed snowstorm in half.<br><br>Looking like he was wearing a silver coat, Raon walked over the fluttering snowflakes as his mouth curled into a smile.<br><br>“I-Impossible! How could a cursed spell be…”<br><br>The Snowflake of the Yellow Lotus was a mental attack that he’d prepared to use against Milland. He never imagined it could be broken by someone like him.<br><br>“Ice? A Curse?”<br><br>Crimson flame burst from Raon’s blade, melting the darkness around him.<br><br>“I’ve experienced that my whole life.”<br><br>From someone way worse than you.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0133.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0135.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0001.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0001.html">
+                                    <h4 class="text-body">Chapter 0001</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0002.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0002.html">
+                                    <h4 class="text-body">Chapter 0002</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0003.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0003.html">
+                                    <h4 class="text-body">Chapter 0003</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+</body>
+
+</html>
