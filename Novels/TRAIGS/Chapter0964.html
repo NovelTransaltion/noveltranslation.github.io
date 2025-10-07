@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3D3V66CJWP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3D3V66CJWP');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="https://freenoveltranslations.com/assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 964</h3>
+        <p>"Urgh!"<br><br>Burren exhaled heavily as he climbed the sand dune that flowed down from the foot of North Grave Mountain.<br><br>"W-what did he do to make the sand so hot?"<br><br>Raon had instructed them to climb this sand dune as their first training exercise. It seemed too simple to be more than a warm-up, but the sand was so hot it felt like hell on earth.<br><br>"It's not just the heat!"<br><br>Martha gritted her teeth, alternating her feet like a desert lizard.<br><br>"The real problem is that bastard suppressing our muscles and blocking our aura so we can't even run properly!"<br><br>Raon had somehow learned to control their muscles and aura, reducing them to the state of ordinary people. As a result, they had no choice but to walk up the scorching sand that swallowed their feet with each step.<br><br>"I-I can't go on..."<br><br>Runaan panted heavily, her tongue hanging out like an overheated dog.<br><br>"I'm just going to sleep..."<br><br>She knelt down and bowed her head, begging to be buried right there.<br><br>"You'll die if you sleep here!"<br><br>Martha shouted, trying to snap her out of it as she grabbed Runaan by the collar and lifted her up.<br><br>"I-I never knew Zieghart had such a hot place."<br><br>Trevin shook his head, saying there was nothing like this even in the south.<br><br>"It's like we're on volcanic terrain. No, it's worse..."<br><br>He bit his lip, claiming this was hotter and more challenging than the volcanic areas he'd passed through on missions.<br><br>"Come to think of it, was there ever a sand dune like this on North Grave Mountain? This sand looks like it belongs on a beach."<br><br>Burren frowned as he looked at the golden sand with white heat waves rising from it.<br><br>"This sand..."<br><br>Mark Goetun pointed at Dorian, his legs trembling as they sank into the sand.<br><br>"It came from our quartermaster's pouch."<br><br>He swallowed hard, saying that Dorian had set up this sand together with Raon.<br><br>"Gulp..."<br><br>Dorian quickly hunched his shoulders as soon as his name was mentioned.<br><br>"Dorian..."<br><br>"You again?"<br><br>"You useless..."<br><br>"So you prepared all those supplies just to torment us!"<br><br>"The Palace Master's spy!"<br><br>The swordsmen of the Light Wind Palace turned to glare at Dorian.<br><br>"I just gave him the sand he asked for! I had no idea he'd make it this hot!"<br><br>Dorian shook his head vigorously, claiming he never imagined this would happen.<br><br>"Besides, I'm a victim too! I'm climbing up here with you, aren't I?"<br><br>He exhaled heavily, insisting that all he did was lend the sand. He looked more aggrieved than anyone else.<br><br>"Damn it..."<br><br>Martha narrowed her eyes as she looked at Raon standing at the top of the dune.<br><br>"Where did that crazy bastard come up with this training method!"<br><br>She stomped her foot, saying she couldn't understand it. Of course, since the ground was sand, her leg sank even deeper.<br><br>"Must be from the Room of Self."<br><br>Burren bit his lip as he grabbed his arm, reddened from the heat.<br><br>"It's exactly like the test he said he took in the Room of Self..."<br><br>Raon had recreated the sand mountain climb he experienced in the Room of Self in reality. His ability to create this massive sand dune and heat the sand was impressive.<br><br>"Hehehe..."<br><br>Runaan's eyes were spinning as if she had lost her last grip on sanity.<br><br>"H-how about we all stop and say we can't do it?"<br><br>Krein whispered in a small voice, suggesting they go on strike from the training.<br><br>"Training strike?"<br><br>"Yes! Honestly, this isn't something we can do with our aura and physical abilities suppressed. Let's say we'll do it again tomorrow..."<br><br>"Shut up and climb."<br><br>As he was saying it was time to stop, a chilling voice like scraping metal came from behind.<br><br>"Do you think 'let's do it again tomorrow' will work?"<br><br>The owner of the sharp voice was the Gambling Monster. He frowned, saying it was absolutely not allowed.<br><br>"G-Gambling Monster..."<br><br>Burren swallowed hard as he watched the Gambling Monster push Krein away with his rough hand.<br><br>"Are you alright?"<br><br>The Gambling Monster was sweating more than the others, perhaps due to the alcohol in his system. His black robe clung to him from the sweat, making him look even more uncomfortable.<br><br>"But why are you here, Chief Administrator?"<br><br>Martha's eyes widened, unable to understand.<br><br>"Why do you think? That damned brat says I have to participate in the training from now on. Says I'm weak..."<br><br>The Gambling Monster clenched his fist until it bled, looking at Raon at the top of the sand dune as if his pride had been hurt.<br><br>"You accepted that?"<br><br>Mark Goetun let out a surprised breath. It was surprising that the Gambling Monster had accepted it right away when he could have refused.<br><br>"One sword strike."<br><br>The Gambling Monster exhaled heavily and shook his head.<br><br>"We made a bet, and I couldn't even block one sword strike without aura. He's become a real monster."<br><br>He bit his lip, saying he couldn't even block Raon's sword who was not using aura.<br><br>"As a martial artist, I had to accept after making the bet. Of course, I didn't know it would be this hellish training..."<br><br>The Gambling Monster moved with heavy steps, saying he should have just taken the sword strike and died.<br><br>"He beat the Gambling Monster with one sword strike without aura?"<br><br>"That crazy bastard came back even crazier."<br><br>"H-Handsome Raon..."<br><br>Burren, Martha, and Runaan swallowed hard as they watched the Gambling Monster climb the sand dune, his robe sticking to his back from sweat.<br><br>"If he's even making the Gambling Monster do this, he won't go easy on us."<br><br>"Let's go. We have no choice but to keep going."<br><br>"Yeah. If we stop, he'll just come up with even worse training..."<br><br>The swordsmen climbed the sand dune with red heat waves rising from it, their eyes tightly shut. At the same time, the same thought crossed everyone's mind.<br><br>'Why did you come out of the Room of Self so quickly!'<br><br>Stay in there for at least another month!<br><br>*&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;*<br><br>Swoosh. Raon pulled his hand out of the sand and smiled excitedly.<br><br>'It's working better than I thought.'<br><br>To recreate the sand mountain he experienced in the Room of Self, he used the Ten Thousand Flames Cultivation to heat the sand. Thanks to reaching the 10-star level, he could easily control the heat.<br><br>'Their expressions are great.'<br><br>Raon smirked as he looked at the swordsmen who seemed to have aged years, their faces contorted.<br><br>'Training has to be painful to be effective.'<br><br>In truth, the Light Wind Palace swordsmen had the ability to avoid the heat with their footwork or endure it with their aura, no matter how hot the sand became. However, if they avoided or blocked it that way, it wouldn't be training. That's why he personally suppressed their aura and physical abilities.<br><br>He had created the same situation he experienced in the Room of Self, which is why the swordsmen were climbing the sand dune with faces that looked like they wanted to die.<br><br>-Are you really an angel?<br><br>Wrath let out an exasperated breath.<br><br>-To use what you suffered on your subordinates! I can only say you've gone mad!<br><br>He lowered his eyebrows, asking how Raon had become so twisted.<br><br>'This training isn't for my own benefit.'<br><br>Raon shook his head with a calm expression.<br><br>'I'm doing this because I want them to grow like I did.'<br><br>-Bullshit! At least lower your curled lips when you lie!<br><br>Wrath wrinkled his nose, saying he wanted to show Raon a mirror.<br><br>'Oh, really?'<br><br>Raon lowered his chin and used his finger to push down his curled lips.<br><br>'To be honest, I did want to see them struggle like this. They've been breezing through most of the training lately.'<br><br>Since everyone in the Light Wind division had reached the Master level, they had been passing most of the training easily and with a nonchalant attitude. He couldn't keep making them spar or do concentration enhancement training every day just because they were getting cocky, so he had been wondering what to make them do. Thanks to the Room of Self, he found the perfect method.<br><br>'I just didn't expect them to struggle this much with the heat.'<br><br>The swordsmen of Zieghart, born and raised in cold regions, seemed more vulnerable to heat. <br><br>'Once they get used to the heat, should I throw them into a sea chilled by Glacier?'<br><br>It might not be a bad idea to throw them into the sea with bone-chilling cold once they've gotten used to the heat.<br><br>'Maybe they'll develop resistance to both water and fire attributes like I did?'<br><br>-No matter how I think about it, you chose the wrong place to be born...<br><br>Wrath frowned, saying Raon would surely have become an evil god if he had been born in the Devildom or the heavenly realm.<br><br>'Thanks for the compliment.'<br><br>Raon was smiling and waving his hand when he sensed someone coming down from the top of North Grave Mountain. Turning his head, he saw Alice running down the rocky slope, dripping with sweat.<br><br>"I wondered why it was so noisy, and it turns out it was you guys."<br><br>Alice chuckled, saying she could hear the screams even from the top of North Grave Mountain.<br><br>"The top? Did you climb all the way up there?"<br><br>Raon's eyes widened. He knew Alice had been working on her body lately, but he didn't expect her to climb all the way to the top.<br><br>"That must have been dangerous."<br><br>The top of North Grave Mountain is a land of extreme cold covered in perpetual snow, impossible to reach with just two legs. It was surprising that Alice, with no aura and a damaged body, had climbed to the top.<br><br>"You're underestimating your aunt too much. As the Sword Emperor's aunt, I should be able to do at least this much!"<br><br>Alice shook her head, saying she had become healthier from climbing the mountain every day.<br><br>"Indeed..."<br><br>Raon nodded as he examined Alice's body.<br><br>"You've changed a lot. It's amazing."<br><br>She was completely different from when he had brought her injured to Zieghart. It was clear she had been training her body as much as possible with a systematic and nutritious regimen, despite her limitations.<br><br>"It's the Dragon Heart you gave me."<br><br>Alice placed her right hand on her left chest.<br><br>"I didn't want to waste even a single drop of mana."<br><br>She smiled brightly, saying she didn't want to show a shameful side of herself to him.<br><br>"But I find you even more surprising."<br><br>Alice curled her lips as she met his eyes.<br><br>"Everyone said you wouldn't achieve any special growth in the Room of Self, but looking at you now, it seems you came out having gained a lot."<br><br>She was confident that he had made great progress, even without hearing any news.<br><br>"Could it be that you've recovered your aura?"<br><br>"No, I can feel it."<br><br>Alice shook her head, saying it was just a feeling.<br><br>"I may not be at your level, but I'll definitely succeed too."<br><br>She licked her lips, saying she would devour all the mana in the Dragon Heart.<br><br>"Your physical condition has improved quite a bit, so you'll be starting cultivation soon, I guess."<br><br>Raon narrowed his eyes as he looked at Alice's arms, now filled with muscle.<br><br>"Yes. I'm planning to start cultivation this weekend."<br><br>Alice nodded, saying she had already made plans.<br><br>"Who will be your guardian?"<br><br>"Uncle Saint. Though I haven't asked him yet."<br><br>She seemed to have already decided on Federick as her guardian without even asking his opinion.<br><br>"That guardian role..."<br><br>Raon lowered his chin slightly as he looked at Alice.<br><br>"I'll do it."<br><br>"You?"<br><br>Alice's eyes widened as if she hadn't even considered the possibility.<br><br>"Yes. Right now, you don't have even a speck of aura, so during cultivation, the mana from the Dragon Heart might backflow or go out of control. I think it would be better if I helped."<br><br>Alice was showing impatience, wanting to recover all her power at once. To prepare for any unforeseen circumstances, it seemed best for him to act as the guardian himself.<br><br>"No, that would be too much. You've already helped me so much, I can't ask you to be my guardian too..."<br><br>Alice shook her head, saying she couldn't accept that much help.<br><br>"Especially 'that matter' - I should have finished it, not passed it on to you. I'm really sorry."<br><br>She bit her lip deeply, saying she should have killed Sif with her own hands.<br><br>"Aunt..."<br><br>He couldn't imagine how it felt for a mother to say she should have killed her own son.<br><br>"Don't say that. You've done so much more for me."<br><br>Raon shook his head with a smile. He meant it. It wouldn't be an exaggeration to say he was alive now thanks to Alice.<br><br>"No, I..."<br><br>"I'll come visit you on the weekend."<br><br>Raon bowed his head after saying he'd see her later.<br><br>"Sigh, alright."<br><br>Alice nodded heavily as if she had no choice.<br><br>"Huff."<br><br>"I-it's over..."<br><br>"I-I really thought I was going to die."<br><br>"We did it! We crossed hell!"<br><br>While he was talking with Alice, the Light Wind Palace swordsmen had broken through the intense heat and finally reached the top of the sand dune.<br><br>"How about that! We overcame even the hell you created!"<br><br>Martha grinned, showing her teeth as she said suppressing their muscles and aura was useless.<br><br>"Yeah. This is no different from our daily training."<br><br>Burren nodded, lightly brushing off the sand on his clothes as if he wanted to show off.<br><br>"It was easy!"<br><br>"This heat is nothing more than a sauna!"<br><br>"Got anything harder?"<br><br>"Did you just play around in the Room of Self?"<br><br>The other swordsmen also shouted with fighting spirit, looking up at the sky as if they felt a sense of achievement. However, not everyone was full of energy.<br><br>"Ugh..."<br><br>"A-alcohol. Please, alcohol..."<br><br>Runaan was wobbling on the ground like a slime, while the Gambling Monster started digging the ground with both hands, searching for alcohol.<br><br>"You arrived 30 minutes earlier than I expected."<br><br>Raon looked up at the sky and briefly licked his lips.<br><br>"Good job, everyone."<br><br>Honestly, he thought it would take 30 minutes longer, but the Light Wind Palace swordsmen had broken through the sand dune faster than expected, as if filled with determination.<br><br>"Hah!"<br><br>"You underestimated us too much!"<br><br>"Yeah, this was as easy as eating cold porridge."<br><br>"The Light Wind palace even won the war against the Black Tower!"<br><br>The swordsmen started showing off as if they were filled with a sense of achievement to the tips of their hair.<br><br>"Oh really? Then you can do more, right?"<br><br>Raon twisted his lips into a smile and jerked his chin towards the bottom of the dune.<br><br>"What?"<br><br>"Uh..."<br><br>"No way..."<br><br>"What are you waiting for? If you climbed up, you have to go back down."<br><br>He smiled at the bewildered swordsmen, telling them to go back down the dune they had just climbed.<br><br>"R-right now?"<br><br>"This place again?"<br><br>"You want us to go down this sinking path now?"<br><br>The swordsmen asked again, their jaws trembling as if their ears had deceived them.<br><br>"If you're not going down, should I roll you down?"<br><br>Raon licked his lips as he emitted a chilling aura.<br><br>"Urgh!"<br><br>"This is driving me crazy..."<br><br>"I want to die..."<br><br>"The bastards who said it was easy earlier and that they could do more. You two are dead when we get down!"<br><br>The swordsmen slowly turned their bodies to face the scorching hot sand, unable to overcome their own bravado.<br><br>"Damn it!"<br><br>"Curse you, Raon Zieghart!"<br><br>"Mom, I think I chose the wrong job!"<br><br>The swordsmen threw themselves into the hot sand, screaming curses.<br><br>"...Can I do it too?"<br><br>Unlike the other swordsmen, Alice looked at Raon as if she wanted to go first.<br><br>"Of course."<br><br>Raon nodded with a smile.<br><br>"Thank you."<br><br>She nodded and followed the Light Wind Palace swordsmen down the sand dune. Despite having no aura and limited physical abilities, she moved faster than the others through sheer willpower.<br><br>"It seems the time has come."<br><br>Raon smiled deeply as he watched Alice's straight back.<br><br>"To release Zieghart's Red Shark back into the sea."<br><br>*&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;*<br><br>On the morning of the day he had promised Alice, Raon left the annex building and headed for the head of house's training ground.<br><br>"You came."<br><br>Federick patted Raon's shoulder, welcoming him.<br><br>"I was worried if I could do well, but with you here, I'm relieved."<br><br>He nodded, thanking Raon for taking time out of his precious schedule.<br><br>"I should be the one thanking you."<br><br>Raon bowed, saying he was grateful for always taking care of his aunt.<br><br>"Well then. Go on in."<br><br>Federick stroked Raon's head as if he was proud of him, then pointed to the inner cultivation room where Alice was waiting.<br><br>"Yes, then."<br><br>Raon greeted Federick again and entered the cultivation room where Alice was waiting. Being the head of house's training ground, even the cultivation room was twice as large. It seemed like several people could cultivate simultaneously.<br><br>"You're here?"<br><br>Alice, who had been leaning against the wall, raised her hand. Her pale expression suggested she was nervous.<br><br>"How's your physical condition?"<br><br>"Top-notch. I've been adjusting my condition for today."<br><br>She nodded, saying her body was ready.<br><br>"Then how about your mind?"<br><br>"That's a bit..."<br><br>Alice bit her lip slightly.<br><br>"I'm worried."<br><br>She let out a heavy sigh, saying she wasn't sure if she could do well.<br><br>"If I fail, it's all over."<br><br>"You don't need to worry about failing, but even if you do, it's okay. We can just get another Dragon Heart."<br><br>"That's not funny."<br><br>"I'm not joking. It's fine even if you fail multiple times."<br><br>He meant it. Considering that not a single dragon appeared during the war with the Black Tower, they had clearly crossed a bridge that couldn't be uncrossed with them. He planned to kill and make dragons extinct every time they appeared from now on. So it didn't matter if Alice failed. They could just give her what they had and get a new Dragon Heart.<br><br>-You're going to make dragons extinct?<br><br>Wrath let out a disbelieving laugh.<br><br>-You're truly insane...<br><br>He shook his head, saying even demon kings don't think about making dragons extinct.<br><br>"Hahaha!"<br><br>Alice burst into laughter as if she couldn't believe it either.<br><br>"Hearing you say that makes me think I absolutely can't fail. I'll definitely succeed."<br><br>She smiled as if some of the burden had been lifted from her mind and sat down in the center of the cultivation room.<br><br>"Phew."<br><br>Alice slowly exhaled and then took out the rainbow-colored Dragon Heart from her subspace pouch and placed it on her lap. It was the item he had given her previously.<br><br>"Then I'll start."<br><br>Alice looked at him for a moment and nodded slightly.<br><br>"Yes. Take as long as you need."<br><br>"I never thought you'd become this reliable."<br><br>She said her nephew was indeed the best, then closed her eyes and began to operate her aura cultivation method. Woong! The light from the Dragon Heart began to swirl and slowly be sucked into Alice's fingertips.<br><br>Given her firm resolve, it seemed Alice wouldn't open her eyes until she had absorbed all the mana contained in the Dragon Heart.<br><br>'This is going to be a long battle.'<br><br>Raon nodded calmly as he felt the determination emanating from Alice.<br><br>'While nothing's happening, should I check the content I forgot?'<br><br>-You fool! What else did you forget!<br><br>Wrath shook his head, muttering that Raon was stupid.<br><br>'Well, I wasn't looking because of you?'<br><br>-Because of me? I am not afraid of anything!<br><br>'Then I guess it's okay to look.'<br><br>Raon grinned and called up the reward message he hadn't checked before.<br><br>[You have achieved deep growth in the Room of Self.]<br><br>[You have experienced 101 deaths.]<br><br>[All abilities...]<br><br>[New trait...]<br><br>-Huh? Was this it?<br><br>Wrath's eyes widened as if he hadn't even considered the possibility of a reward.<br><br>-Damn it! I shouldn't have brought it up!<br><br>He slapped his mouth with his chubby hand as if regretting his words.<br><br>'I didn't look at it last time.'<br><br>Raon was smiling as he checked the message, but then he narrowed his eyes.<br><br>'Hmm, that's...'<br><br>Behind the message, he could see mana from the Dragon Heart escaping from Alice's shoulder.<br><br>'As expected, she can't absorb it all.'<br><br>It seemed that in her current state, with an imperfect body, significant mental trauma, and having lost all her aura, Alice couldn't perfectly absorb the mana from the Dragon Heart.<br><br>'It can't be helped... No, wait.'<br><br>Raon narrowed his eyes again as he lowered the reward message.<br><br>'What if I don't just protect, but help with that part?'<br><br>It certainly wouldn't be easy. Helping someone else's cultivation, especially someone without aura, was a dangerous act that could cause great harm to himself. But with his growth from the Room of Self, he felt he could redirect the overflowing mana from the Dragon Heart back to Alice.<br><br>'Aunt...'<br><br>As he watched Alice struggling with her cultivation, memories of the time they spent together came flooding back. Their first meeting when he woke up on the pirate ship, catching the Blue Dragon together, her flying in to save his life during a mission, and her face crying out in anguish when betrayed by her son, Sif.<br><br>Recalling their time together, filled with joy, anger, sorrow, and pleasure, his heart began to burn hot.<br><br>'I hope this can be a gift for Aunt who has been through such hard times.'<br><br>Raon placed his hand on Alice's back and operated the Ring of Fire to give her a gift after all her hardships. He purified the scattered mana from the Dragon Heart with the Ring of Fire and then reconnected it to her mana circuit. Whoosh!<br><br>A light warmer than the sun that had given him immense power bloomed around Raon as he supported Alice's back.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0963.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0965.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0966.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0966.html">
+                                    <h4 class="text-body">Chapter 0966</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0967.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0967.html">
+                                    <h4 class="text-body">Chapter 0967</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0968.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0968.html">
+                                    <h4 class="text-body">Chapter 0968</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+</body>
+
+</html>

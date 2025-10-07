@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3D3V66CJWP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3D3V66CJWP');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="https://freenoveltranslations.com/assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 963</h3>
+        <p>"A way to shorten the time, even if just a little..."<br><br>Martha looked at Denier and swallowed hard.<br><br>"Can we really reduce the time it takes to reach the wall of transcendence?"<br><br>Having only recently attained Grandmaster status, she thought it would take at least 10 years to reach the wall of transcendence, no matter how fast she progressed.<br><br>Assuming she could achieve transcendence, 10 years was an incredibly short time, but when she thought of her mother suffering under the Leader of the White Blood Religion, even one year felt like an eternity.<br><br>Despite feeling frustrated and gloomy, she couldn't show it. When she heard Denier's words about being able to shorten that time, her heart began to race as if it would explode.<br><br>"It depends on you, but the possibility is high."<br><br>Denier nodded, saying that Martha could definitely do it.<br><br>"Hmm..."<br><br>The wall Martha was leaning on crumbled. She had applied too much force with her fingertips, causing the bricks to break.<br><br>"That doesn't mean you'll immediately reach the wall of transcendence, though."<br><br>Denier shook his head as he cleaned up the broken bricks himself.<br><br>"It will only shorten the time slightly."<br><br>"What's the method?"<br><br>Martha clenched her fist, which was covered in brick dust.<br><br>"Will I learn new martial arts? Or undergo special training?"<br><br>She immediately asked about the method, confident she could endure any type of training.<br><br>"Both are necessary. But the focus isn't on training or martial arts."<br><br>Denier slowly shook his head.<br><br>"It's an elixir."<br><br>As he said "elixir," he pulled out a black wooden box from his chest.<br><br>"An elixir?"<br><br>"To be precise, it's more of a poison than an elixir."<br><br>"P-poison?"<br><br>Martha's eyes widened as she looked at the black wooden box.<br><br>"There's no need to be afraid. Would I do anything to harm you?"<br><br>Denier waved his hand lightly as if to calm her.<br><br>"Of course not. I was just surprised when you said poison."<br><br>Martha nodded with a faint smile.<br><br>'If I can't trust Father, who can I trust?'<br><br>Denier had adopted her as his daughter despite the opposition of the entire Zieghart family, and cherished her like his own child. If he had wanted to kill or use her, he could have done so long ago, which made him one of the most trustworthy people along with Raon.<br><br>'Besides, if he really intended to poison me, he wouldn't have called it poison.'<br><br>The fact that he openly called it poison made it clear that he had no intention of deceiving her.<br><br>"But why poison..."<br><br>Martha looked at Denier with eyes full of trust.<br><br>"The Dreamshade Elixir in this box is made from a poisonous herb called dreamshade. It has the effect of putting a person into a state of suspended animation."<br><br>Denier raised his finger and drew a cloud-like shape.<br><br>"Suspended animation?"<br><br>"Yes. But it's not just simple suspended animation. It's the state of extreme focus we call enlightenment. You can enter the deepest part of the mental world."<br><br>He nodded gravely, saying that the moment one takes the Dreamshade Elixir, they can immediately enter the deepest part of the mental world.<br><br>"In a way, the effect is similar to the Room of Self. It wouldn't be an exaggeration to call it a small Room of Self."<br><br>Denier clenched his fist, saying that the moment one takes the Dreamshade Elixir, they can enter the mental world and achieve growth faster than anyone else.<br><br>"I didn't know such an elixir existed..."<br><br>Martha let out a gasp of surprise.<br><br>"I obtained it by chance during this recent mission. The dreamshade plant is now extinct and forgotten, but its effects are certain."<br><br>He stroked the black wooden box, saying it was an elixir that couldn't be obtained even for ten million gold coins.<br><br>"Dreamshade Elixir..."<br><br>Martha's fingers trembled as she looked at the black wooden box.<br><br>'This is completely unfair.'<br><br>The mental world is not a place one can enter at will. It was amazing that one could forcibly enter this mental realm, which can only be accessed through extreme concentration and enlightenment. And to enter its deepest part, no less.<br><br>'If this is true...'<br><br>She might be able to shave off a few years. If Denier's words were true, she could reduce her training period by at least a year. Sweat unconsciously formed on her hands. While this was something she should accept without question, there were a few things to consider.<br><br>"If it's a poison, there must be side effects, right?"<br><br>Martha bit her lip slightly as she looked at the Dreamshade Elixir box in Denier's hand.<br><br>"Yes. There are side effects of not waking up from the suspended state or losing one's memories."<br><br>Denier calmly explained the side effects of the Dreamshade Elixir.<br><br>"Not waking up, or memory loss..."<br><br>Martha furrowed her brow deeply.<br><br>'Should I say it's not as bad as I thought?'<br><br>Given how potent the Dreamshade Elixir seemed, she had thought the side effects might be fatal, but memory loss was something she could potentially accept depending on the extent.<br><br>"Of course, there's a solution. Both side effects occur because of entering too deep into the mental world, so we just need to wake you up before that happens."<br><br>Denier shook his head as he lightly tapped the wooden box.<br><br>"If you take the Dreamshade Elixir, I'll stand guard and watch over you, so there's no need to worry."<br><br>He revealed eyes filled with sincerity, saying he could handle everything himself.<br><br>"Hmm..."<br><br>Martha shook her head again as she looked at the box.<br><br>"How long would I sleep if I take this?"<br><br>"To see effects, you need to be in a suspended state for at least two months, and the limit without side effects is about half a year."<br><br>Denier spread his fingers, saying that according to past records, everyone who went beyond six months experienced side effects.<br><br>"Two months to half a year..."<br><br>Martha raised her trembling hand towards the box but stopped.<br><br>"I appreciate your consideration, but I don't think it's possible right now."<br><br>"What's the reason?"<br><br>"Right now is the most crucial time for establishing the Light Wind Palace's structure. As a squad leader, I can't be absent."<br><br>While it was true that her mother was the most important thing to her, Raon and her comrades in the Light Wind division were almost equally precious. She couldn't let everyone waste such an important time because of her. Even if she were to take the Dreamshade Elixir, it would have to be after the Light Wind Palace's structure was fully established.<br><br>"If that's the case, it can't be helped."<br><br>Denier smiled and put the box back into his chest, as if telling her to let him know when she was ready.<br><br>"Thank you. Really..."<br><br>Martha bowed her head, biting her lip slightly.<br><br>"That's not something family should say to each other."<br><br>Denier stroked Martha's head and shook his chin.<br><br>"And don't tell anyone about the Dreamshade Elixir. The fewer people who know about treasures, the better."<br><br>"Of course. I won't tell anyone."<br><br>Martha raised her hand, saying not to worry.<br><br>"Oh, but why don't you take the Dreamshade Elixir yourself, Father? Why give it to me..."<br><br>"I don't particularly need it. I wanted you to take it."<br><br>Denier closed his eyes, as if it was unnecessary for him.<br><br>"You don't need it?"<br><br>"That's right. I'm already at the wall of transcendence. Taking one Dreamshade Elixir won't be enough to cross that high wall."<br><br>He smiled faintly, saying he wanted to give it to her because she could benefit more from it.<br><br>"The wall of transcendence...?"<br><br>Martha took a step closer to Denier.<br><br>"Then, Father, did you enter the Room of Self when you reached the wall of Grandmaster?"<br><br>"No. I didn't enter the Room of Self."<br><br>Denier shook his head, saying he had never entered the Room of Self.<br><br>"What? Why didn't you enter! If you're at the wall of transcendence, you could enter the Room of Self and cross the wall like the Central Martial Palace Master!"<br><br>She became curious about why Denier hadn't entered the Room of Self despite standing at the wall of transcendence.<br><br>"I thought it wasn't time yet. Unlike my brother, I haven't been standing at the wall of transcendence for very long."<br><br>Denier rotated his wrist, saying he needed to accumulate more training.<br><br>"That common sense doesn't always apply! That Raon kid came out stronger than those who stood at the wall, even though he hadn't reached it himself! The Head of House and the Central Martial Palace Master..."<br><br>Martha repeated the words of Karoon and Glenn, who had evaluated Raon's martial prowess.<br><br>"Enter the Room of Self as soon as it opens! Your achievements are more than enough!"<br><br>She grabbed Denier's hand, insisting that he could definitely do it.<br><br>"If you become a Transcendent too, Zieghart will have five Transcendents!"<br><br>"It would still be four."<br><br>"Huh? Isn't it five?"<br><br>Martha slightly narrowed her eyes.<br><br>"The Head of House, Alice, the Central Martial Palace Master, Raon, and you, Father. That's five, right?"<br><br>She tilted her head, finding it strange.<br><br>"...Yes, you're right."<br><br>Denier lightly patted Martha's head, saying he had made a mistake.<br><br>"Come on, that's not funny."<br><br>Martha chuckled, saying she was surprised.<br><br>"Anyway, make sure you enter! Promise!"<br><br>She held out her pinky finger, asking him to make a promise.<br><br>"Alright. I understand."<br><br>Denier smiled faintly and linked his pinky with Martha's.<br><br>"Then I'll see you at dinner later. I need to prepare some things for the Light Wind kids."<br><br>Martha went to her room first, saying she had some preparations to make for the Light Wind division.<br><br>"..."<br><br>After watching Martha enter her room, Denier went into the study on the second floor.<br><br>With a thud, he placed the black wooden box on the desk and carefully opened the lid. The inside of the Dreamshade Elixir box he had intended to give Martha was completely empty.<br><br>"Five, huh..."<br><br>Denier closed the empty box, wearing a lonely smile like a dry leaf.<br><br>*&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;*<br><br>The fifth training ground of Zieghart.<br><br>Usually a quiet place far from the main building, it was now rumbling from morning to evening due to the construction of the Light Wind Palace.<br><br>Raon entered the fifth training ground, feeling the pleasant vibrations.<br><br>The swordsmen of the Light Wind division were standing in front of the platform in their black uniforms, waiting for him. The sharp energy emanating from their fingertips seemed to cause a stinging pain on his skin.<br><br>'They're starting to look experienced now.'<br><br>Martial prowess can't be judged by age alone.<br><br>-Of course! This king raised them, didn't he?<br><br>Wrath nodded, saying that this level was basic for his subordinates.<br><br>'Maybe so.'<br><br>Although the Light Wind division swordsmen were young, they had gained enough martial prowess and experience to be considered peak martial artists due to their numerous real battles and training. Remembering their childhood one by one filled his chest with a strange sense of pride. Raon stepped onto the platform, revealing his admiration for the Light Wind division.<br><br>"We greet the Palace Master!"<br><br>"We greet the Palace Master!"<br><br>At Burren's shout, who was standing at the front, all the Light Wind division swordsmen bowed.<br><br>"Everyone, rise."<br><br>Normally, he would have waved his hand and asked what kind of greeting this was, but today was an important event for the Light Wind division, so he accepted his subordinates' greetings by waving his hand.<br><br>"Did you all rest well while I was gone?"<br><br>Raon curled his lips as he made eye contact with the Light Wind division swordsmen.<br><br>"How could we rest when the Palace Master went into training? We all just trained."<br><br>Martha shook her head vigorously, saying they spent their vacation training.<br><br>"I felt I had many shortcomings, so I just swung my sword at home."<br><br>Burren also wrinkled his nose bridge, saying he had honed his swordsmanship like Martha.<br><br>"I slept. Deeply..."<br><br>Runaan yawned long, saying she had spent a happy time not leaving her bed.<br><br>"I diligently replenished our supplies! We shouldn't be short of anything now!"<br><br>Dorian grinned, saying he could produce anything. Judging by his brightened face, it seemed he had really stocked up on supplies to his heart's content.<br><br>-Then tell him to bring out bead ice cream right now!<br><br>Wrath waved his chubby hand, saying they should test him.<br><br>"I followed this guy around... I thought I was going to die..."<br><br>Krein sniffled, saying it was more tiring than going shopping with his mom and dad.<br><br>"How about you, Palace Master? There are rumors spreading that you've obviously gotten stronger."<br><br>Trevin licked his lips, curious about how much stronger Raon had become.<br><br>"It's getting noisy now that you're here. Damn Light Wind..."<br><br>The Gambling Monster, who was sitting on the platform, waved his hand. He seemed to be asking for quiet, saying he had a headache from the alcohol he drank yesterday.<br><br>"Hoho."<br><br>Unlike the Gambling Monster, Mark Goetun let out a hearty laugh, seeming to enjoy the noisy atmosphere of the Light Wind division.<br><br>"Hurry up and organize the system. It's driving me crazy."<br><br>The Gambling Monster drank some water, telling them to quickly establish the Light Wind division's organization and system.<br><br>"Understood."<br><br>Raon nodded to the Gambling Monster and stood at the edge of the platform.<br><br>"I will now announce the Light Wind Palace's organizational structure and system. There was a lot of talk about the name 'Light Wind Palace,' but I intend to keep it as is."<br><br>While he might accept opposing opinions on other matters, he wanted to keep the name "Light Wind" to remember Rimmer.<br><br>"Yes!"<br><br>The Light Wind division swordsmen nodded without any objection, seemingly without complaint.<br><br>"First, the Warring Steel Division will become the first division of the Light Wind Palace, keeping its name. Of course, the Division Leader will remain the same."<br><br>Raon decided to make the Warring Steel Division the first battalion of the Light Wind Palace, considering their martial prowess, experience, and achievements.<br><br>"We accept the command."<br><br>"We accept the command!"<br><br>At Trevin's shout, the Warring Steel Division swordsmen behind him simultaneously knelt and bowed their heads.<br><br>"The Light Wind division will form units following their squad leaders due to the lack of swordsmen."<br><br>Raon nodded calmly as he looked at Burren, Martha, and Runaan.<br><br>"Units, is it?"<br><br>"Well, there aren't enough numbers to be Division Leaders."<br><br>"I'm fine with anything."<br><br>Martha, Burren, and Runaan curled their lips, satisfied with becoming Unit Leaders instead of Squad Leaders.<br><br>"The names of the units are based on the Unit Leaders' nicknames. The unit Runaan will lead is called the Full Moon Unit, after her nickname 'Full Moon Fairy,' and..."<br><br>Raon turned his fingertips as he looked at Martha, whose face was turning bright red.<br><br>"The unit Martha will lead is called the Rakshasa Unit, after her nickname 'Miss Rakshasa'..."<br><br>"Hey, you bastard!"<br><br>Martha stomped her foot violently and jumped onto the platform.<br><br>"Rakshasa Unit? Want me to show you what a real rakshasa is like? Huh?"<br><br>"C-calm down! This is an official event right now!"<br><br>Burren grabbed Martha's shoulders as she was about to lunge at Raon.<br><br>"Yeah. I like the name..."<br><br>Runaan muttered with a faint smile, saying it was an enviable name. Looking at her now, this girl was quite mischievous too.<br><br>"This damn ice woman's unit is called Full Moon, and we're Rakshasa? You damn fools!"<br><br>Martha screamed that she absolutely couldn't accept this.<br><br>"Well, that's how it is. I plan to supplement the numbers through the upcoming selection ceremony. I want to promote the units to divisions."<br><br>Raon nodded, saying he wanted to promote both the Full Moon Unit and the Rakshasa Unit to divisions.<br><br>"Sounds good."<br><br>"I agree..."<br><br>Burren and Runaan nodded, seeming to like the idea.<br><br>"I object! No one will come with a name like Rakshasa Unit!"<br><br>Martha screamed that it was absolutely unacceptable.<br><br>"It's cool, isn't it? I'd even like to change Light Wind Palace to Rakshasa Palace if I didn't have an attachment to the name 'Light Wind.'"<br><br>Raon licked his lips, saying he would have changed it right away if he didn't have lingering feelings for the name "Light Wind."<br><br>"Well, it's not bad. It sounds strong."<br><br>Krein nodded in agreement.<br><br>"It would be nice if we changed the emblem to look like a ghost too."<br><br>Burren chuckled as he drew the shape of a ghost with his finger.<br><br>"I strongly agree!"<br><br>Runaan raised her hand, unusually loudly.<br><br>"You're all crazy..."<br><br>Martha bowed her head, already seeming exhausted.<br><br>"Well, let's stop joking around here."<br><br>Raon waved his hand as he looked at everyone.<br><br>"Huh? Oh..."<br><br>Martha looked at Raon with eyes full of expectation.<br><br>"Next is Sir Mark Goetun."<br><br>However, Raon betrayed her expectations and called Mark Goetun's name.<br><br>"Sir Mark Goetun said he prefers working with fewer people, so please take on the role of guardian for the Light Wind Palace."<br><br>He chose Mark Goetun as the guardian of the Light Wind Palace, accepting his opinion that he preferred fighting alone rather than leading a group.<br><br>"It's an honor! I will protect the Palace Master with my life!"<br><br>Mark Goetun knelt down, saying he would become the Palace Master's shadow as a guardian.<br><br>"I'll assign Dorian and Krein under you."<br><br>Dorian and Krein are the strongest swordsmen in the Light Wind division after Trevin and the three Unit Leaders. They each have their specialties, so moving with Mark Goetun will be a great help.<br><br>"Huh?"<br><br>Burren's eyes widened the moment Mark Goetun became the guardian. He seemed surprised that the organizational structure was different from what he had expected.<br><br>"And..."<br><br>Raon smiled faintly as he looked at the surprised Burren.<br><br>"I appoint Burren Zieghart as the Vice Palace Master of the Light Wind Palace."<br><br>He put Burren's name in the position of Vice Palace Master without any hesitation.<br><br>"H-how could I..."<br><br>Burren's jaw trembled, seeming to have thought Mark Goetun would become the Vice Palace Master.<br><br>"Burren. You're the only one who can control and nurture these Light Wind troublemakers in my place."<br><br>Raon came down from the platform. He patted Burren's shoulder, saying he trusted him.<br><br>"Ugh..."<br><br>Burren closed his eyes tightly as if moved, then opened them and knelt down, bowing deeply.<br><br>"I will repay that trust even if it costs me my life!"<br><br>He shouted not that he was grateful, but that he would respond to the trust. Raon liked that answer even more.<br><br>"The members of Light Wind squad three, which Burren was in charge of, will be split equally between the Full Moon Unit and the Rakshasa Unit."<br><br>Raon lowered his hand after finishing the assignment of the remaining personnel.<br><br>"Now that we've completed the basic organizational structure, shall we create the system?"<br><br>"Huh?"<br><br>"Isn't it all finished?"<br><br>"Aren't organizational structure and system the same thing?"<br><br>The swordsmen opened their eyes wide, as if they didn't understand what he meant.<br><br>"Training."<br><br>Raon nodded slightly with a thin smile.<br><br>"The system for swordsmen is ultimately about martial prowess. I've prepared a very special training to enhance your martial prowess."<br><br>He rotated his wrist, saying it would be different from the training they've had so far.<br><br>"Oh! The Palace Master's training?"<br><br>"I'm looking forward to it."<br><br>"Training prepared by a Transcendent himself, it's bound to be extraordinary."<br><br>The swordsmen from the Warring Steel Division nodded, smiling with anticipation.<br><br>"Oh, here it comes..."<br><br>"I should have taken sick leave..."<br><br>"Damn! I didn't know we'd start training right away."<br><br>In contrast, those from the Light Wind division trembled with pale faces, as if facing hell.<br><br>"Everyone, move to the entrance of North Grave Mountain."<br><br>"L-let's go..."<br><br>Burren, befitting his role as Vice Palace Master, led the struggling swordsmen towards North Grave Mountain.<br><br>"Hmm..."<br><br>The Gambling Monster slowly got up and shook his head.<br><br>"Now that the Light Wind division has become the Light Wind Palace, I guess I'm no longer needed."<br><br>He shook his head, saying it had been tough until now.<br><br>"It's going to be even tougher from now on, but thanks for your hard work..."<br><br>"Where are you going?"<br><br>Raon shook his head, asking why he was leaving.<br><br>"Didn't I say? Now that the Light Wind division has become the Light Wind Palace, I no longer have any..."<br><br>"Chief Administrator, you seem to be under a big misunderstanding."<br><br>He waved his hand with a smile.<br><br>"W-what do you mean..."<br><br>The Gambling Monster swallowed dryly, seemingly flustered by Raon's relaxed demeanor.<br><br>"Chief Administrator, you're not the Chief Administrator of the Light Wind division, but of the annex building, aren't you? Have you forgotten after all this time?"<br><br>Raon shrugged, telling him to remember well.<br><br>"Huh? Uh-oh!"<br><br>The Gambling Monster's jaw dropped as if past memories were flooding back.<br><br>"In other words, even if you want to escape, you can't."<br><br>Raon shook his head, telling him not to worry.<br><br>"W-wait! Then how long do I have to stay here?"<br><br>"For life."<br><br>He shook his head, saying there was absolutely no way out.<br><br>"And Chief Administrator, you should go to North Grave Mountain too. It would be good for you to train together from now on. To prevent any distractions."<br><br>Raon shook his head, saying that now even the Chief Administrator couldn't escape.<br><br>"Damn it!"<br><br>The Gambling Monster clutched his head, lamenting that he had ruined everything by speaking up.<br><br>-To even constrain such an old man...<br><br>Wrath's jaw trembled as he looked at the laughing Raon and the wailing Gambling Monster.<br><br>-Truly a ruthless fellow.<br><br>'If I can enslave a demon king, isn't an old man fine?'<br><br>Raon waved his hand, asking why he was so surprised.<br><br>-Enslaving a demon king? Who..."<br><br>As Wrath tilted his head, Raon pointed at him with his finger.<br><br>-This king? This king is... Ah!<br><br>Wrath finally realized that he too was in a situation similar to Raon's own slave and screamed.<br><br>"Aaaaaargh!"<br><br>-Uwaaaaaargh!<br><br>"Well, shall we go?"<br><br>Raon climbed up North Grave Mountain, listening to the harmony of human and demon screams.<br><br>"As long as they don't die, it should be fine."<br><br>Should we start with hellfire mountain climbing?</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0962.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0964.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0966.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0966.html">
+                                    <h4 class="text-body">Chapter 0966</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0967.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0967.html">
+                                    <h4 class="text-body">Chapter 0967</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0968.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0968.html">
+                                    <h4 class="text-body">Chapter 0968</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+</body>
+
+</html>
