@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3D3V66CJWP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3D3V66CJWP');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="https://freenoveltranslations.com/assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 152</h3>
+        <p>Raon immediately went to the annex building after leaving the lord’s manor. Yua seemed nervous, as her hand was slightly trembling.<br><br>“It will be fine. Sir Roenn is a nice person.”<br><br>“Ah, okay.”<br><br>Roenn was one of the few people, alongside Denier Zieghart, who respected Raon and Sylvia without discrimination. Since Glenn was the one that guaranteed it, he wouldn’t teach Yua assassin skills.<br><br>‘But I should still check, just in case.’<br><br>Raon decided that he would participate in Yua’s first lesson with Roenn to check on what she would learn.<br><br>For once, I like what you’re thinking.<br><br>‘What?’<br><br>Pineapple Girl is a precious maid of the King of Essence. Make sure to take care of her properly.<br><br>Wrath pat Yua’s head with his icy hand, though Yua obviously didn’t feel anything.<br><br>‘You still don’t know your place.’<br><br>Raon clicked his tongue towards Wrath. He was calling Yua his maid even though he was the one that had been captivated by her cooking. The gluttonous demon king still hadn’t realized his position.<br><br>“Why are you following me?”<br><br>He turned his head towards Dorian, who was following him while eating his crackers.<br><br>“Why do you say that to me, young master? I really am having a hard time today.”<br><br>Dorian crumpled his cracker bag and sighed heavily.<br><br>“No one cares about me. They don’t even realize I’m there, and I got a free ride in the exam. Where the hell is my presence?”<br><br>“Do you want to take the exam now, then? I can ask Instructor Rimmer…”<br><br>Rimmer was a bit too lazy, but he earnestly cared about his trainees. If he asked him for an exam, he wasn’t going to refuse.<br><br>“Pff! We shouldn’t do that!”<br><br>Dorian quickly shook his head—extremely quickly.<br><br>“Since graduation is already over, we shouldn’t annoy him. I’m just saying that it’s regrettable.”<br><br>He scratched his head with a smile.<br><br>“Go back and rest, then.”<br><br>“Wow, that’s so mean. We’ve traveled together for more than a year now, why are you being so cold to me?”<br><br>“I’m not really cold.”<br><br>Raon did feel slightly sorry for him, but it was obvious how annoying it would be if he were to follow him to the annex building. He needed to send him away to feel comfortable.<br><br>“Also, I can’t leave even if I wanted to.”<br><br>“What?”<br><br>“Back at the great training ground, the young master’s mother asked me to come along.”<br><br>“Ah…”<br><br>“That’s why we should go together! It’s been a long time since I ate something delicious in the annex building! Let’s go, Yua!”<br><br>Dorian grabbed Yua’s hand and started running towards the annex building.<br><br>Food! The food in the annex building is pretty good! Move faster!<br><br>Coldness flowed down from Wrath’s mouth, even though he was trying to look cool with his arms crossed.<br><br>“Haa.”<br><br>Raon could only sigh, with the drooling Wrath and running Dorian and Yua…<br><br>‘There are three kids here…’<br><br> <br><br>* * *<br><br> <br><br>Raon arrived at the annex building with two annoying people and Yua. Since it was a sudden return, loud noises kept coming from the inside.<br><br>Listening to the familiar sounds, he opened the annex building’s door. Sylvia, Helen, and the maids were busily moving around in the lobby and kitchen. They jumped at him upon seeing him.<br><br>“Raon!”<br><br>“Young master!”<br><br>“You are so late!”<br><br>“Are you hurt anywhere?”<br><br>They checked his entire body to see if he had been hurt or had any issues somewhere. The way Sylvia and the maids were making a fuss made Raon realize once again that he was at home.<br><br>“I’m back.”<br><br>Raon smiled, looking at his family’s glad and worried eyes.<br><br>“Welcome back.”<br><br>Sylvia’s hands, which were gathered in front of her chest, were trembling as she gave him a warm smile.<br><br>‘Did mother also grow up?’<br><br>She would’ve immediately burst into tears in the past, but it looked like Sylvia had also grown up, just like himself.<br><br>“It’s a reli… gasp!”<br><br>“Raon!”<br><br>Just as he thought it was a relief and was about to smile, Sylvia jumped at him.<br><br>“You grew up so nicely! How did you become so pretty? Whose son are you?”<br><br>She started rubbing her face against him with the exact same tone as before.<br><br>“M-Mom, please…”<br><br>Raon bit his lip and asked Helen for a rescue, but it had the opposite effect.<br><br>“Young master!”<br><br>“Young master Raon!”<br><br>“Welcome back!”<br><br>“You became so handsome… sniff!”<br><br>“Argh…”<br><br>Even Helen and the other maids burst into tears, and Raon found himself stuck between them, unable to move anymore. The only people that were staying in their spots were Judiel, Dorian, and Yua.<br><br>“Haa.”<br><br>“Hnngh…”<br><br>“Wow…”<br><br>Judiel sighed faintly and went to the kitchen, Dorian covered his mouth and grinned as he enjoyed the scene, and Yua just fidgeted her fingers because she couldn’t get used to it.<br><br>And Wrath…<br><br>Where is the food?<br><br>He was the same as always.<br><br> <br><br>* * *<br><br> <br><br>Raon sat at the table and looked around. Sylvia, Dorian, Yua, and even the maids were sitting at the table with him.<br><br>The maids kept refusing, but they were forced to join because Sylvia ordered them to eat together for the first time in a long time.<br><br>The sweet and salty fragrance is pressing upon the King of Essence. Raise your weapon, Raon Zieghart.<br><br>Coldness kept flowing down Wrath’s mouth like drool as he looked at the tasty looking food filling the table.<br><br>“We should introduce ourselves before we start eating.”<br><br>Sylvia stood up. She smiled gently towards Yua, who was nervously shrinking.<br><br>“You must’ve realized from what happened earlier, but I’m Raon’s mother, Sylvia.”<br><br>She introduced herself first, so that Yua wouldn’t feel pressured.<br><br>“Ah, m-my name is Yua. I’m from Habun Castle.”<br><br>Yua abruptly stood up and bowed at Sylvia and the maids, one after the other.<br><br>“I see, you are Yua.”<br><br>Sylvia couldn’t stop smiling, as if she were watching a cute little thing.<br><br>“Raon, is she your daughter by any chance?”<br><br>“What nonsense are you spouting?”<br><br>“Huhu, it’s a joke.”<br><br>“Ugh…”<br><br>Raon closed his eyes, his face turning red. He could remain self-assured even in front of Glenn, but he couldn’t help being flustered by Sylvia.<br><br>“The food is getting cold, so let’s start eating before we begin.”<br><br>“What are we doing?”<br><br>“Obviously, we are going to listen to you and Dorian’s story about what happened over the past year. I hope you weren’t planning on not telling us about that.”<br><br>“I’ll tell you about it late…”<br><br>“Let me tell you about it, since I’ve done nothing today!”<br><br>Dorian instantly swallowed the pie in front of him, and briskly stood up.<br><br>“Dorian…”<br><br>“First of all, we didn’t head north right away. We visited Cameloon to buy some supplies before crossing the huge mountain that is Habun Castle…”<br><br>Raon tried to stop him with his gaze, but since Dorian didn’t do anything all day, he vigorously started telling the story of their journey.<br><br>Sylvia and the maids exclaimed, their hands clasped together, each time he mentioned Raon’s actions. When they heard that he jumped down the castle walls twice to save the soldiers, they were deeply impressed, and their eyes welled up in tears.<br><br>Sylvia kept watching Raon happily—until the part about him rescuing Yua and the manager from Eden’s attack. That was when she bit her lip and pulled Yua to hug her.<br><br>“It must’ve been hard.”<br><br>Her words came from the bottom of her heart. Since she’d also experienced the loss of her most precious person, she could sympathize with the circumstances that made Yua move to Zieghart.<br><br>“I-It’s okay.”<br><br>Yua had been suppressing her tears, but they started welling up in her eyes upon receiving Sylvia’s emotional words.<br><br>“Sniff…”<br><br>“Ma’am…”<br><br>“Yua.”<br><br>Since the maids were also aware of Sylvia’s story, tears started flowing from their eyes, and the table quickly turned into a sea of tears.<br><br>‘I guess they will get along.’<br><br>Raon smiled faintly as he looked at Yua, Sylvia, and the maids. Just as he’d expected, his family would take good care of her.<br><br>“Raon, you did a great job. And thank you.”<br><br>Sylvia smiled at him while hugging Yua. It looked like she was thanking him for living up to Zieghart’s name, as she’d mentioned before.<br><br>“Haap!”<br><br>Dorian was also crying even though he didn’t know the full story. Raon couldn’t tell if he was simple or empathetic.<br><br>But Wrath was still the same.<br><br>Aren’t you going to eat?<br><br>He kept flailing his small hand, unable to take his eyes off all the food.<br><br>The food is getting cold!<br><br>His inability to read the mood was indeed at the level of a demon king.<br><br> <br><br>* * *<br><br> <br><br>Raon finished a light meal, then returned to his room. Sylvia brought Yua with her, saying that Yua would sleep with her, and a guest room was given to Dorian, who only had bad things happen to him that day.<br><br>Damn it!<br><br>Wrath was spreading a large amount of coldness because of having missed the food.<br><br>We had the annex building’s food after such a long time, yet you only ate after it got cold! It’s a sin! You sinner!<br><br>‘It was still delicious despite being cold. Isn’t that enough?’<br><br>It would’ve been even better if it wasn’t cold! I seriously can’t agree with you.<br><br>‘I can agree with that.’<br><br>Unlike Wrath, who always had to eat the best food, Raon didn’t really care about the taste because he had the experience of being an assassin. Food didn’t really matter as long as it filled his stomach.<br><br>As he thought about the fact that it was so annoying to be Wrath, he could feel someone’s presence standing in front of his door. Three knocks could be heard—it was Judiel.<br><br>“Enter.”<br><br>Judiel silently opened the door and entered, kneeling on the floor.<br><br>“Greeting the master.”<br><br>Since she swore that she’d follow him before he left for Habun Castle, she was calling him her master.<br><br>“Did the Central Martial Palace contact you yet?”<br><br>“They sent a signal when they were at the great training ground.”<br><br>Judiel slowly nodded.<br><br>“They ordered me to find out what master has been doing, what master has obtained, and how much stronger master has become.”<br><br>“I knew it.”<br><br>Raon snickered. Since Karoon Zieghart had been humiliated once again when he stepped up, that was exactly what he expected him to do.<br><br>“How shall I proceed?”<br><br>“Convey Dorian’s story to them exactly as you heard it.”<br><br>That story was modified, so there was no problem with telling it to other people.<br><br>“Were there any other problems in the annex building?”<br><br>“No. The other forces didn’t try to hold us in check, probably thanks to the incident with Raden Zieghart. The Central Martial Palace didn’t pay attention to us at all for a while.”<br><br>“I see.”<br><br>Raon smiled in satisfaction. Thanks to having one-sidedly beaten Raden on purpose, it looked like people were only paying attention to him instead of the annex building.<br><br>“You must’ve worked hard in various ways. Good job.”<br><br>“I-It was nothing. It was all thanks to the master.”<br><br>Judiel swallowed, wetting her dry mouth, and shook her head.<br><br>‘He is really an amazing person.’<br><br>One year ago, he had predicted what would happen after he left and gave her directions, and what he predicted had actually happened. All she did was to follow those directions.<br><br>The prowess that neared completion at such a young age, and the strategy devised from his exceptional composure, made Raon one of the most outstanding monsters in Zieghart.<br><br>“Master, do you know about the internship?”<br><br>“Internship?”<br><br>“So, you didn’t.”<br><br>She seemed to have expected him to not know about it, as she started to explain.<br><br>“Since you became a swordsman, you have to join one of the armed organizations in the house.”<br><br>“Indeed.”<br><br>“Before joining one, you can pick one of them to experience a month-long internship with.”<br><br>“Ah…”<br><br>Now that he thought about it, some of the trainees were talking about the internship after the graduation ceremony in the great training ground.<br><br>“Can I decide to be an intern wherever I wish?”<br><br>“Yes. Unlike with the Selection Ceremony, the rookie swordsman has the right to choose the internship they want.”<br><br>Judiel took a document that she had prepared beforehand from her shirt.<br><br>“I think you can read this before deciding.”<br><br>Upon accepting the document, Raon unrolled it and started reading. The information about all of Zieghart’s organizations was written inside, from the direct line’s organizations to the collaterals, external, and even the vassal family divisions.<br><br>From the missions they usually partook in to their numbers, prowess, and even their positions inside the house—there was enough information to roughly understand how the house was run.<br><br>“You must’ve worked hard on putting this together. Good job.”<br><br>Raon nodded after reading the overall document.<br><br>“It was nothing. I just did my job.”<br><br>Judiel closed her eyes, saying that it wasn't a big deal.<br><br>“Hmm.”<br><br>After reading the document, Raon put it by his pillow.<br><br>“Did you make your decision?”<br><br>“Yes.”<br><br>Raon gave her a refreshing smile, looking at the upper part of the document.<br><br>“There’s a perfect place for me.”<br><br> <br><br>* * *<br><br> <br><br>The next day before daybreak, Raon went to the fifth training ground. He was excited to inhale the cold air of the empty training ground. Habun Castle wasn’t bad either, but he felt the most comfortable there.<br><br>He breathed and used the Star Connecting Sword that he had practiced the most in the training ground. The technique’s wave now contained a prevalent flow, shaking the training ground.<br><br>“No one would believe you if you told them that was basic swordsmanship.”<br><br>Once he finished one round of the Star Connecting Sword, an admiring voice could be heard from behind him.<br><br>Since Raon was already aware of the fact that someone was watching him, he nonchalantly looked around.<br><br>“I came here just in case, but of course you were here. You are still the same, even though one year has passed.”<br><br>Burren's face was slightly softer as he smiled.<br><br>“Though, your skills are in another dimension now.”<br><br>His green eyes were filled with amazement at his swordsmanship.<br><br>Shitty-eyes has changed.<br><br>‘Indeed.’<br><br>It wasn’t just his looks. He could feel that his power became a lot sturdier. The explosive pressure of an Expert could be felt. He must’ve overcome many trials to get stronger.<br><br>“I have multiple debts against you… Argh!”<br><br>“Raon!”<br><br>As Burren was about to walk towards him, the training ground’s door burst open and Runaan came running at him. Burren was bounced back because of her charge.<br><br>“Raon, it’s been a while.”<br><br>Runaan nodded with her blank eyes, which were the exact same as a year ago. However, unlike her eyes, her appearance had become more mature. She looked so cold that it would be difficult to speak to her if he had met her for the first time.<br><br>Her prowess had also increased. Sharpness and softness coexisted in her pressure, which was blooming on her shoulders.<br><br>“Take this!”<br><br>Runaan extended her hand, which was grasping a box. It was the bead ice cream box.<br><br>Raon could only smile. He realized once again that he was back home upon seeing that box.<br><br>Ooh! You are indeed the King of Essence’s first maid, the ice cream girl! What are you doing? Start eating it already!<br><br>Wrath was rubbing his sleepy eyes, his tongue wagging.<br><br>“I also brought something.”<br><br>Raon brought the box he had left in the locker room, handing it to Runaan. It was an ice cream box that looked more sophisticated than hers.<br><br>“What is this?”<br><br>“It’s the new product I bought from the city.”<br><br>“Is it… Mine?”<br><br>“Yes.”<br><br>Since he kept receiving gifts from her, he figured he should pay her back at some point, so he decided to buy it in the city.<br><br>“Ah…”<br><br>Runaan’s jaw dropped and wouldn’t close as she accepted the box. It looked like she never thought she would get something from him, since she kept giving things to him.<br><br>“Th-Thank you.”<br><br>The thin corners of Runaan’s lips were raised. It was almost his first time seeing that smile.<br><br>“You are still… Argh!”<br><br>“Are you playing house or something?”<br><br>As Burren was trying to come back after he got pushed back, he was stepped on by Martha, who jumped over the wall and fell down.<br><br>“How old are you to be playing like that? Huh?”<br><br>Martha snorted, sweeping back her ebony hair. She looked like noble royalty, but her speech was still so vulgar.<br><br>‘She got stronger, too.’<br><br>Martha’s prowess had increased even more than Burren and Runaan’s had. Considering the fact that she was solely focused on power, without any fluidity, her personality must’ve not changed either.<br><br>“I had this feeling from before, but you guys' heads are filled with flowers…”<br><br>While Martha kept blabbering with a frown, he offered her a bead ice cream.<br><br>“Why are you…?”<br><br>“Try eating it.”<br><br>“…Ugh.”<br><br>Martha fidgeted, her expression even worse than when she was fighting, before taking one chocolate ice cream and stepping back. Raon felt like he was feeding a wild animal.<br><br>“How do you like it?”<br><br>“I-It’s delici… No, it’s alright.”<br><br>She was turned away while eating the ice cream so that she wouldn’t show her face to him, but she couldn’t hide the way her earlobes turned slightly red. She apparently liked it a lot.<br><br>“Mhm, mhm.”<br><br>Runaan also looked extremely happy as she put the bead ice cream in her mouth.<br><br>Stop giving it to others and eat one yourself! You also ended up eating cold food yesterday!<br><br>Wrath flailed his arms around as he spread coldness. It looked like he was going to create a tidal wave of coldness if Raon didn’t do something.<br><br>‘Alright, alright.’<br><br>Raon nodded and looked at the ice cream. As he was pondering over which one to eat among the four remaining ones, Wrath jumped on the spot and pointed at the blue ice cream.<br><br>Mint. Chocolate! Eat the mint chocolate, no matter what!<br><br>‘……’<br><br>Raon’s head was filled with doubt that such a glutton could possibly be a demon king.<br><br>‘Haa…’<br><br>Raon sighed and put the mint chocolate in his mouth. It wasn’t that good. It had a refreshing feel to it, but he couldn’t understand why people ate it.<br><br>Hell yeah, this is life…<br><br>On the other hand, Wrath’s eyes were trembling like a drug addict’s as he grinned.<br><br>“Hmm, did you decide on your internship?”<br><br>Burren dusted off his clothes and stood up. He had been knocked down and then stepped on, but his expression didn’t really change. His personality was a lot softer than before. It wasn’t just his might that got stronger.<br><br>“That’s obvious. I will join my father.”<br><br>“Me, too.”<br><br>Martha and Runaan, who were eating ice cream, replied at once.<br><br>“I knew it. I’m also going to the Central Martial Palace. Then, where are you going?”<br><br>Hearing Burren’s question, Runaan and Martha stopped eating the ice creams and looked around.<br><br>“I…”<br><br>“Raon!”<br><br>“You’re really here!”<br><br>“Ahahaha! You haven’t changed at all.”<br><br>As Raon started to open his mouth, the door opened, and the other swordsmen flocked in. As if they were trying to catch up with the year they’d been separated, they surrounded him and kept talking to him continuously.<br><br>Raon didn’t exactly like crowded places, but it actually didn’t feel that bad since he could see the faces he hadn’t seen in a long time, and he could feel their growth and delight.<br><br>Every swordsman of the fifth training ground was gathered, and they kept talking about various things with Raon in the middle of them.<br><br> <br><br>Whoosh!<br><br> <br><br>While they were having a fun time, Rimmer appeared along with a green wind, surging over the wall.<br><br>“Don’t you ever get tired? I told you to rest for today.”<br><br>“I just happened to come by.”<br><br>“I had a feeling that Raon would be here.”<br><br>“And he was actually here.”<br><br>The trainees laughed, looking at Rimmer, who shook his head.<br><br>“Huh? All forty-three of you are here. Then, let’s finish things today. I’m too lazy to come back tomorrow.”<br><br>After counting the trainees, Rimmer quickly nodded.<br><br>“What are we finishing?”<br><br>“Deciding on your internships. That’s my last job.”<br><br>Although he was originally heading towards the locker room, he went up on the platform.<br><br>“I thought I was supposed to hand it in as a document tomorrow.”<br><br>“It’s too sloppy…”<br><br>“Is this your first time seeing me be sloppy? It’s not even the real Selection Ceremony, so just do it. They won’t ask anything difficult of the interns, anyway.”<br><br>Rimmer waved his hand and dismissed their dissatisfaction. He was definitely the laziest elf in the world.<br><br>“I’m going to call out the names of the organizations now, so raise your hand if you want it. First of all, Operation Blade.”<br><br>He took out a crumpled paper from his back pocket and started calling out the names of Zieghart’s organizations, one by one.<br><br>“Pff!”<br><br>“Seriously, he does whatever he wants.”<br><br>“Well, I’ve already decided anyway.”<br><br>Even though the trainees were complaining, they still raised their hands when the organization they wanted was called.<br><br>Just as they said before, Runaan and Martha joined the division where their fathers were leading, and Dorian picked the Zephyr’s Flow, which was in charge of supplies.<br><br>As Rimmer kept calling out the names of organizations, Raon and Burren were the only ones left.<br><br>“Next up is the Central Martial Palace.”<br><br>“Yes!”<br><br>Burren raised his hand as soon as Central Martial Palace, led by Karoon Zieghart.<br><br>“Huh? Are you also joining them, Raon?”<br><br>“Gasp! Why would you?”<br><br>Rimmer and Burren’s eyes widened, since Raon was confidently raising his hand.<br><br>The guy that hates you is in the Central Martial Palace. Why are you trying to join them?<br><br>Wrath tilted his head, unable to understand his actions.<br><br>‘Because the pain that doesn’t kill me will only make me stronger.’<br><br>Raon’s eyes were shining brightly.<br><br>He had decided on it as soon as he heard about the internships.<br><br>He would join the Central Martial Palace, which was managed by Karoon Zieghart—who hated him the most—and learn everything about their training methods.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0151.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0153.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0150.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0150.html">
+                                    <h4 class="text-body">Chapter 0150</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0151.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0151.html">
+                                    <h4 class="text-body">Chapter 0151</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0153.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0153.html">
+                                    <h4 class="text-body">Chapter 0153</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+</body>
+
+</html>
