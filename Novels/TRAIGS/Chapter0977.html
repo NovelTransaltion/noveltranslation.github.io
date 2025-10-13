@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3D3V66CJWP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3D3V66CJWP');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Novel Transaltions</title>
+    <meta name="description" content=" ">
+    <meta property="og:image" content="https://freenoveltranslations.com/assets/img/TRAIGS.webp">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="../../assets/css/404-NOT-FOUND-animated-v2.compiled.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md py-3 navbar-shrink" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>Novel Transaltions</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto"></ul>
+                <div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        </svg></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                            </svg>Auto</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3 py-0">
+        <h1 class="text-center">The Reincarnated Assassin is a Genius Swordsman</h1>
+        <h3 class="my-5">Chapter 977</h3>
+        <p>"A lizard's nest?"<br><br>Ogram tilted his head as he looked at Raon.<br><br>"What are you suddenly talking about?"<br><br>He furrowed his thick caterpillar-like eyebrows, seemingly not understanding.<br><br>“If you're talking about a lizard…”<br><br>Chamber chewed on the candy in her mouth.<br><br>"You must be talking about dragons."<br><br>She narrowed her eyes, instantly grasping Raon's words.<br><br>"That's right."<br><br>Raon nodded, meeting the gazes of the Five Kings seated around the round table.<br><br>"Why are you trying to provoke dragons while searching for the Five Demons?"<br><br>King Lecross unfolded his arms, indicating that an explanation was needed.<br><br>"To explain this, we need to go back to the time of the war with the Black Tower."<br><br>Raon raised a finger, looking at Chamber.<br><br>"As Chamber knows well, the demonic energy that bloomed from the Black Tower spread across dimensions to this continent."<br><br>He created cold energy with his finger and placed it on the continental map floating above the round table. The southern part of the continent rippled in a bluish hue as if frozen.<br><br>"The demonic energy that covered the south was so massive that it wouldn't have been strange if a demon king had descended, but the dragons, who claim to be the mediators of this world, were nowhere to be seen."<br><br>Raon looked at the frozen southern continent with furrowed brows.<br><br>"It was a stark contrast to how they would rush in shouting 'demon king' at the slightest hint of demonic energy. In other words..."<br><br>He lowered his gaze to the leaders of the Five Kings, who were listening intently without even blinking.<br><br>"They must have known that the Black Tower was in Montiro."<br><br>Raon nodded with certainty.<br><br>"Is, is that really true? How could those who are supposed to maintain neutrality..."<br><br>Ogram furrowed his brow, unable to comprehend.<br><br>"If what you say is true, then the dragons have no right to bear the title of mediators!"<br><br>He clenched his fist tightly, his voice filled with genuine anger.<br><br>"Light Wind Palace Master. Can you take responsibility for those words?"<br><br>Lecross let out a low groan as he looked at Raon.<br><br>"This is not a matter we can proceed with hastily. No matter what anyone says, the dragons are still the strongest race on the continent."<br><br>He tapped his finger on the round table, emphasizing that the decision to turn the dragons into complete enemies should be made carefully.<br><br>"I vouch for the Light Wind Palace Master's words."<br><br>Chamber nodded with her eyes closed.<br><br>"The dimensional gate to the Black Tower remained open, and demonic energy poured out from it, but the dragons never showed themselves."<br><br>She bit her lip as she looked at Montiro on the map.<br><br>"If those lizards, who instinctively sense demonic energy, remained still, the reason is obvious."<br><br>Chamber sighed, suggesting it was time to accept the truth.<br><br>"In fact, you already know, don't you?"<br><br>Raon shook his head briefly.<br><br>"The dragons have never been neutral from the beginning. Even from the time of the Five Demons, not the current Four Demons, they've been subtly taking sides. If they had truly been faithful to their role as mediators, the Black Tower should have disappeared long ago."<br><br>The Black Tower is a military organization created by drawing power from the Devildom, not the continent. The fact that they didn't stop it despite it spewing thick demonic energy towards the continent shows that their neutrality had been broken long ago.<br><br>"Moreover, it doesn't matter if the dragons didn't know the Black Tower was in Montiro. It's clear they've built a close relationship with the Four Demons."<br><br>Raon nodded, stating that it was certain the Four Demons and dragons had formed a temporary alliance.<br><br>"It's undeniable that dragons are the strongest race. But rather than being stabbed in the back or side in the upcoming war, I think it's right to deal with them when we can."<br><br>He clenched his fist, saying they should handle it now rather than leaving unnecessary future troubles.<br><br>"Then..."<br><br>Glenn briefly raised his chin.<br><br>"How many dragons would you like to deal with?"<br><br>He spread his hands as if asking for a number.<br><br>"How many? That's not it. Of course..."<br><br>Raon shook his head firmly.<br><br>"All of them."<br><br>He placed his hand on the hilt of the Heavenly Drive, saying he didn't want to leave a single dragon that had strayed from neutrality.<br><br>"Huh...?"<br><br>Lecross let out a disbelieving laugh.<br><br>"K-kill all the dragons?"<br><br>Xanthos also gaped in shock.<br><br>"As expected, I like your refreshing attitude!"<br><br>Ogram raised his boulder-like fist in agreement.<br><br>"That's right. If we're going to do it, we should do it properly!"<br><br>Chamber also nodded without hesitation, pleased with the idea.<br><br>"Hmm, I'm not particularly drawn to dragons, but..."<br><br>Larian lowered her voice, seemingly returning to her original personality after the Archangel's story. Judging by her earlier reaction, it seemed she had already dissected dragons before.<br><br>"Hmm!"<br><br>Glenn also nodded broadly, apparently approving of Raon's boldness.<br><br>"It seems like something even a demon king wouldn't do, but..."<br><br>Lecross briefly licked his lips.<br><br>"If you say you can do it, it might not be a bad idea to try."<br><br>He raised his hand, indicating his agreement.<br><br>"However, we shouldn't target all of them from the start."<br><br>Raon shook his head as he looked at the continental map.<br><br>"Our goal isn't just to kill dragons."<br><br>"Right. We need to gather information about the Four Demons."<br><br>Chamber immediately nodded.<br><br>"Yes. The dragons that have been sleeping in their lairs for a long time won't have information about the Four Demons. So we..."<br><br>Raon licked his lips as he looked at the continental map again.<br><br>"We need to find dragons that communicate with the outside world, even if not with human. The stronger and older, the better. That way, we can hear good information."<br><br>The sleeping dragons might not even know that the Five Demons have become the current Four Demons. To get proper information, they needed to find one strong enough and trusted by the Lords.<br><br>"Unfortunately, I don't know any dragons like that."<br><br>Chamber licked her lips, disappointed that she couldn't help.<br><br>"I-I don't know any such dragons either..."<br><br>Larian raised her trembling hand, in the same situation as Chamber.<br><br>"I certainly don't know any!"<br><br>Ogram shook his head proudly.<br><br>"Then let's look for an Ancient Dragon that communicates with the outside world while searching for the Four Demons' location."<br><br>He concluded that they should slowly gather information first, as they couldn't find the way to the Four Demons now anyway.<br><br>"Good. We'll gather as much information as we can on our side too."<br><br>King Lecross picked up his pen, saying he would contact Owen immediately.<br><br>"Then it's decided."<br><br>Glenn, who hadn't expressed an opinion because Raon was his grandson, only nodded after everyone agreed. He looked extremely satisfied.<br><br>"I'll search too."<br><br>Raon nodded, looking at the leaders of the Five Kings. It seemed he would need to contact his acquaintances as well, since information from the Black Market would be shared.<br><br>"We've decided how to deal with the dragons and find information. But how do you plan to recover the people enchanted by Raphael?"<br><br>King Lecross narrowed his eyes curiously.<br><br>"I-I want to know too..."<br><br>Larian also revealed her sparkling eyes from within her robe, asking to be told.<br><br>"In fact, that's just as important as this matter."<br><br>Xanthos nodded, saying it was something that must be resolved.<br><br>"Raphael enchanted people with her warm voice imbued with divine power. So we're going to use that method in reverse."<br><br>He smiled faintly and brought his hands together.<br><br>"Use it in reverse?"<br><br>"Yes. I can erase divine power, and my subordinate has a better voice than Raphael. Probably..."<br><br>Raon curled his lips as he looked out the window.<br><br>"We'll see an interesting sight."<br><br>*&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;*<br><br>"Phew..."<br><br>Alice let out a heavy sigh as she looked at the darkening sky.<br><br>"I might die at this rate."<br><br>As Karoon grew stronger every day, it became increasingly difficult to face him. Every time they sparred, chills ran down her spine as his blade came close to her neck if she let her guard down even slightly.<br><br>'I never knew he had such passion.'<br><br>Although she was training with all her might, wanting to repay her debt to Raon, Karoon was beyond that. He was truly swinging his sword with his life on the line every day.<br><br>Karoon, who originally didn't even show himself sweating, saying that the direct lineage of Zieghart should be perfect, was now throwing everything away with the sole desire to become stronger, regardless of how he looked.<br><br>'Of course, his talent is beyond even that passion.'<br><br>She had thought Sylvia had the best talent among the siblings, but now her opinion had changed. Karoon's talent had bloomed late but was surpassing everything.<br><br>'At this rate, he might really be able to catch up.'<br><br>If Karoon continued to train like this, he might not surpass Raon, but he could stand on the same level.<br><br>'Wait a minute! Come to think of it. This is infuriating. They were all under me! I can't lose like this... Huh?'<br><br>Alice, who had been muttering that she couldn't lose like this, suddenly opened her eyes blankly.<br><br>"Why am I here?"<br><br>She had arrived near the annex building without thinking as she walked with weakened legs.<br><br>"To come here naturally, I must have been really exhausted."<br><br>Alice let out a hollow laugh as she massaged her aching shoulders.<br><br>'Since I'm at the annex anyway, should I go see the kids?'<br><br>It had been a while since she visited the annex, so it might be good to see everyone while she was here.<br><br>'I'll get dinner too... Huh?'<br><br>Alice narrowed her eyes as she entered the garden of the annex with a smile.<br><br>'Denier?'<br><br>Why is he here? Denier was standing in front of the dark lake, quietly looking at the annex.<br><br>'And what's that light...'<br><br>A faint, indescribable halo of light flickered and disappeared around him. If it hadn't been reflected on the surface of the lake, even she wouldn't have been able to see it. It was a mysterious, faint light. However, there was something even stranger. The expression of Denier standing in reality and the Denier reflected in the lake seemed different.<br><br>"Denier!"<br><br>Alice approached Denier with furrowed brows.<br><br>"Sister."<br><br>Denier bowed his head to Alice without the slightest hint of surprise.<br><br>"Are you done with training?"<br><br>"What were you just doing?"<br><br>Alice spread her Aura Perception to examine Denier's surroundings. However, she couldn't sense anything.<br><br>"What do you mean?"<br><br>Denier tilted his head as if he didn't understand.<br><br>"I clearly saw a strange light flickering around you."<br><br>Alice nodded her chin, saying she saw it with her own eyes.<br><br>"It must have been fireflies. I wasn't doing anything."<br><br>Denier raised both hands, saying he really was just standing still.<br><br>"But..."<br><br>Alice was about to speak again but closed her mouth. She didn't actually sense any special energy from Denier.<br><br>"Are you really Denier?"<br><br>Alice looked at Denier, raising a low but heavy aura.<br><br>"Who else would I be?"<br><br>Denier shook his head, saying he didn't like strange jokes.<br><br>"Hmm..."<br><br>Alice twisted her lips as she examined Denier.<br><br>'His build, aura, and even temperament are all exactly the same.'<br><br>She no longer blindly trusted even family members. But she felt no sense of discomfort from the Denier in front of her.<br><br>"Do you remember what I first gave you as a gift?"<br><br>"A gift?"<br><br>Denier shook his head with a smile.<br><br>"Sister, you've never given me anything like a gift."<br><br>He tilted his head as if asking what she was talking about.<br><br>"R-right."<br><br>Alice touched the back of her head and averted her eyes.<br><br>'It's definitely Denier. There's no sense of discomfort.'<br><br>But that light she saw earlier was bothering her. Although she didn't sense any malicious energy or strange qualities, she wanted to confirm after experiencing the incident with Sif.<br><br>"What were you doing here?"<br><br>Alice narrowed her eyes as she looked around.<br><br>"The Head of House and the Light Wind Palace Master went to the Five Kings' conference, and since you and brother were focusing on training, I was patrolling Zieghart."<br><br>Denier nodded calmly, saying he was doing what he could.<br><br>"Hmm..."<br><br>Alice narrowed her eyes. As he said, it wasn't strange for him to patrol the outskirts since all the Transcendents were busy.<br><br>"You..."<br><br>As Alice was about to speak again, the door behind the annex opened.<br><br>"Aunt!"<br><br>Sia, with a wooden sword at her waist, waved both hands towards Alice.<br><br>"Sia?"<br><br>Alice let out a breath as she hugged the running Sia. It seemed Sia had come out after hearing her loud voice earlier.<br><br>"Sister, brother?"<br><br>Sylvia also came out following Sia, her eyes wide open.<br><br>"What brings you two here?"<br><br>She bowed her head with a smile, saying she was glad to see them.<br><br>"My feet just brought me here somehow..."<br><br>Alice scratched the back of her head, saying she came without realizing it.<br><br>"I was on patrol."<br><br>Denier gave Sylvia the same explanation.<br><br>"Ah, then why don't you come in for some tea? Helen baked some delicious cookies this afternoon."<br><br>Sylvia raised her hand, inviting Alice and Denier inside.<br><br>"Hmm, should we?"<br><br>Alice lowered her hand, realizing the mood had already been broken.<br><br>"I'll pass. I still have places to patrol."<br><br>Denier shook his head, saying he should go now that he had seen they were fine.<br><br>"Wait a moment!"<br><br>Sylvia told them to stay put and went into the annex, coming back out with a small bundle.<br><br>"I've packed some cookies. Please eat them on your way."<br><br>She held out her hand holding the bundle with a smile.<br><br>"...Thank you."<br><br>Denier received the bundle containing the cookies with a faint smile.<br><br>"It's nothing. Take care."<br><br>Sylvia shook her head with a smile.<br><br>"Sister, please come in."<br><br>She nodded to Alice, saying she was warming up the tea.<br><br>"Alright. Just a moment."<br><br>Alice briefly nodded and then approached Denier.<br><br>"Denier."<br><br>She parted her lips, looking into Denier's calm eyes.<br><br>"Let me ask you one last thing. Your path is towards Zieghart, right?"<br><br>"Of course."<br><br>Denier nodded without the slightest hesitation.<br><br>"In the past and now, I've always only thought of Zieghart."<br><br>He nodded as if telling her not to worry and disappeared into the darkness of North Grave Mountain.<br><br>"..."<br><br>Alice narrowed her eyes as she looked up at the path where Denier had disappeared.<br><br>'It's clearly different from Sif.'<br><br>When she was caught off guard by Sif, she felt a sense of discomfort but didn't want to doubt her son, which led to her being stabbed. But now, she felt no discomfort or strangeness from Denier at all.<br><br>'Trust, huh...'<br><br>Alice looked at the crescent moon that seemed to have been cut by a sword and then entered the annex where warm energy was emanating.<br><br>*&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;*<br><br>"I can't do it! No, I won't!"<br><br>Olga shook her hands vigorously, saying she absolutely wouldn't do it.<br><br>"What kind of song is that?!"<br><br>She stood up, knocking over her chair, saying she'd rather sing a love song than that kind of song.<br><br>-That troublemaker's ears must be broken too!<br><br>Wrath gritted his teeth as he looked at Olga, whose cheeks had turned red.<br><br>-How dare she disrespect a song praising this king!<br><br>He snorted, saying she had no artistic sense at all.<br><br>"Sister..."<br><br>Yua gently reached out and held Olga's hand.<br><br>"Let's do it together. We need to save people."<br><br>She sent a cat-like gaze, saying she knew Olga didn't like it but asking her to do it together.<br><br>"That's right. Please save others as you saved me, sister."<br><br>Rensia also held Olga's other hand, pleading with her.<br><br>"Ugh..."<br><br>Olga closed her eyes tightly, then opened them and nodded weakly.<br><br>"Alright."<br><br>She slumped her shoulders as if she had no choice.<br><br>"Then let's start again."<br><br>Raon parted his lips, looking at Olga who had sat back down.<br><br>"Feeling the shining Shining, entering into the dark Dark, the icy Ice of..."<br><br>"Aaaargh!"<br><br>Olga grabbed her head and screamed as she heard the lyrics.<br><br>"Who the hell made that damn song?!"<br><br>She opened the window and screamed, saying she was going crazy.<br><br>-Here we go again!<br><br>Wrath's eyes were filled with blue anger.<br><br>-How pitiful those ear holes that don't know this wonderful song!<br><br>He shook his head, saying Olga had no talent for music.<br><br>"Just try to follow along. It will definitely have an effect."<br><br>Raon waved his hand and recited the lyrics again.<br><br>'It can't not work.'<br><br>That song was one of the demon king's hymns praising Wrath. If he provided the Authority of Wrath and Yua and Olga sang, they should be able to return the minds of those enchanted by Raphael to normal.<br><br>"Shi-Shining... Dark... Dark..."<br><br>Olga began to recite the lyrics with trembling lips. It seemed she was forcing herself for Yua and Rensia's sake.<br><br>'But who really made this?'<br><br>Raon tilted his chin, looking at Wrath.<br><br>'Honestly, it's a bit childish...'<br><br>-Who made it? Of course, I made it!<br><br>Wrath puffed out his chest, saying he obviously made it himself.<br><br>'...I see.'<br><br>He shook his head repeatedly.<br><br>-What do you mean, 'I see'? What does that mean?<br><br>'It doesn't mean anything.'<br><br>-Speak clearly!<br><br>'It really doesn't.'<br><br>As Raon was waving his hand to avoid Wrath, there was a sound. Tap tap tap. A white pigeon was knocking on the window. It was an urgent message from the Shadow Agents.<br><br>'Why is this...'<br><br>Raon swallowed dryly as he received and unfolded the letter.<br><br>-What does it say?<br><br>Wrath leaned in curiously.<br><br>'It looks like we won't have to wait long.'<br><br>Raon licked his lips as he looked at the letter.<br><br>'It seems they've found a suitable dragon's nest to visit first.'</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center"><a href="Chapter0976.html"><button class="btn btn-primary mx-4" type="button">Previous</button></a><a href="../../TOC/TRAGIS_TOC.html"><button class="btn btn-primary mx-4" type="button">Table of Contents</button></a><a href="Chapter0978.html"><button class="btn btn-primary mx-4" type="button">&nbsp; Next&nbsp;&nbsp;</button></a></div>
+        </div>
+    </div>
+    <footer class="bg-primary-gradient">
+        <div class="container py-4 py-lg-5">
+            <div data-bss-type="blog-loop">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-0" data-bss-type="blog-loop-base">
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0975.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0975.html">
+                                    <h4 class="text-body">Chapter 0975</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0976.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0976.html">
+                                    <h4 class="text-body">Chapter 0976</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-tag-tragis col" data-bss-type="blog-loop-item">
+                        <div class="card"><a href="Chapter0974.html"><img class="img-fluid card-img-top" width="572" height="800" src="../../assets/img/TRAIGS.webp"></a>
+                            <div class="card-body"><a href="Chapter0974.html">
+                                    <h4 class="text-body">Chapter 0974</h4>
+                                </a>
+                                <p class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2025 Novel Transaltions</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let collections = document.querySelectorAll('[data-bss-type="blog-loop"]');
+            let tagNavs = document.querySelectorAll('[data-bss-type="tag-nav"]');
+            let tagLoops = document.querySelectorAll('[data-bss-type="tag-loop"]');
+            let authorLoops = document.querySelectorAll('[data-bss-type="author-loop"]');
+            let authorNavs = document.querySelectorAll('[data-bss-type="author-nav"]');
+
+            window.addEventListener("popstate", (e) => {
+                for (let collection of collections) {
+                    updateCollection(collection);
+                }
+
+                for (let tagNav of tagNavs) {
+                    updateTagNav(tagNav);
+                }
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            });
+
+            for (let collection of collections) {
+
+                updateCollection(collection);
+
+                if (!canPaginateCollection(collection)) continue;
+
+                let pagination = collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+
+                pagination.addEventListener('click', function(e) {
+                    let paginationItem = e.target.closest('.page-item');
+                    if (!paginationItem) return;
+
+                    e.preventDefault();
+
+                    if (paginationItem.classList.contains('disabled') || paginationItem.classList.contains('active')) return;
+
+                    let collection = paginationItem.closest('[data-bss-type="blog-loop"]');
+                    if (!collection) return;
+
+                    let page = parseInt(paginationItem.dataset.page);
+                    if (!page) return;
+
+                    let pageParam = getPageParameter(collection);
+
+                    if (pageParam) {
+                        const url = new URL(window.location);
+                        url.searchParams.set(pageParam, page);
+                        history.pushState({
+                            [pageParam]: page
+                        }, document.title, url);
+
+                        for (let c of collections) {
+                            let param = getPageParameter(c);
+                            if (param !== pageParam) continue;
+                            updateCollection(c);
+                        }
+                    } else {
+                        updateCollection(collection, page);
+                    }
+                });
+            }
+
+            for (let tagNav of tagNavs) {
+                updateTagNav(tagNav);
+                tagNav.addEventListener('click', onTagClick);
+            }
+
+            for (let tagLoop of tagLoops) {
+                tagLoop.addEventListener('click', onTagClick);
+            }
+
+            for (let authorLoop of authorLoops) {
+                authorLoop.addEventListener('click', onAuthorClick);
+            }
+
+            for (let authorNav of authorNavs) {
+                updateAuthorNav(authorNav);
+            }
+
+            function onTagClick(e) {
+                onBlogFilterClick(e);
+
+                for (let nav of tagNavs) {
+                    updateTagNav(nav);
+                }
+            }
+
+            function onAuthorClick(e) {
+                onBlogFilterClick(e);
+
+                for (let authorNav of authorNavs) {
+                    updateAuthorNav(authorNav);
+                }
+            }
+
+            function onBlogFilterClick(e) {
+                const item = e.target.closest('[data-bss-filter="blog"]');
+                if (!item || !item.dataset.hasOwnProperty('bssHref') || !item.dataset.hasOwnProperty('bssFilterParam')) return;
+
+                const stateNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+
+                if (stateNode && (stateNode.classList.contains('disabled') || stateNode.classList.contains('active'))) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const link = item.dataset.bssHref;
+                if (!linksToCurrentPage(link)) return;
+
+                e.preventDefault();
+
+                const url = new URL(window.location);
+                const filterParam = item.dataset.bssFilterParam;
+                const filterValue = item.dataset.bssFilterValue || '';
+
+                const collectionsToUpdate = [];
+                const newQueryParams = {
+                    [filterParam]: filterValue
+                };
+
+                for (let c of collections) {
+                    if (!canFilterCollection(c)) continue;
+                    collectionsToUpdate.push(c);
+
+                    let pageParam = getPageParameter(c);
+                    let page = url.searchParams.get(pageParam);
+                    if (page === null || page == 1) continue;
+
+                    newQueryParams[pageParam] = 1;
+                }
+
+                for (let param in newQueryParams) {
+                    if (newQueryParams[param]) {
+                        url.searchParams.set(param, newQueryParams[param]);
+                    } else {
+                        url.searchParams.delete(param);
+                    }
+                }
+
+                history.pushState(newQueryParams, document.title, url);
+
+                for (let c of collectionsToUpdate) {
+                    updateCollection(c);
+                }
+            }
+
+            function getCollectionFilters(collection) {
+                let filters = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssFilters);
+
+                    if (Array.isArray(parsed)) {
+                        filters = parsed;
+                    }
+                } catch (e) {}
+
+                return filters;
+            }
+
+            function getCollectionEmptyFilterAction(collection, filter = '') {
+                let emptyFilterActions = [];
+
+                try {
+                    const parsed = JSON.parse(collection.dataset.bssEmptyFilterActions);
+
+                    if (Array.isArray(parsed)) {
+                        emptyFilterActions = parsed;
+                    }
+                } catch (e) {}
+
+                const action = emptyFilterActions.find(action => action.filter === filter);
+
+                return action ? action.value : '';
+            }
+
+            function canFilterCollection(collection) {
+                return !!getCollectionFilters(collection).length;
+            }
+
+            function canFilterCollectionByTag(collection) {
+                return getCollectionFilters(collection).includes('tag');
+            }
+
+            function canFilterCollectionByAuthor(collection) {
+                return getCollectionFilters(collection).includes('author');
+            }
+
+            function shouldShowAllItemsForEmptyFilter(collection, filter = '') {
+                return getCollectionEmptyFilterAction(collection, filter) === 'show-all';
+            }
+
+            function canPaginateCollection(collection) {
+                return !!getCollectionPagination(collection);
+            }
+
+            function getCollectionPagination(collection) {
+                return collection.querySelector('[data-bss-type="blog-loop-pagination"]');
+            }
+
+            function getPageParameter(collection) {
+                return collection.dataset.bssPageParam;
+            }
+
+            function linksToCurrentPage(path = '') {
+                let currentURL, url;
+
+                try {
+                    currentURL = new URL(window.location);
+                    url = new URL(path, window.location.href);
+                } catch (e) {
+                    console.error(e);
+                }
+
+                return currentURL.origin === url.origin && currentURL.pathname === url.pathname;
+            }
+
+            function updateCollection(collection, page, activeTag = '', activeAuthor = '') {
+
+                const url = new URL(window.location.href);
+
+                if (canPaginateCollection(collection)) {
+                    if (!page) {
+                        let pageParam = getPageParameter(collection);
+                        page = (pageParam ? url.searchParams.get(pageParam) : 1) || 1;
+                    }
+                }
+
+                if (canFilterCollectionByTag(collection) && !activeTag) {
+                    let tagParam = 'tag';
+                    activeTag = url.searchParams.get(tagParam) || '';
+                }
+
+                if (canFilterCollectionByAuthor(collection) && !activeAuthor) {
+                    let authorParam = 'author';
+                    activeAuthor = url.searchParams.get(authorParam) || '';
+                }
+
+                renderCollectionPage(collection, page, activeTag, activeAuthor);
+            }
+
+            function renderCollectionPage(collection, page = 1, activeTag = '', activeAuthor = '') {
+
+                page = Math.max(parseInt(page, 10), 1);
+
+                collection.style.removeProperty('display');
+
+                let loopBase = collection.querySelector('[data-bss-type="blog-loop-base"]');
+                loopBase && loopBase.style.removeProperty('display');
+
+                let emptyState = collection.querySelector('[data-bss-type="empty-state"]');
+                emptyState && emptyState.style.setProperty('display', 'none', 'important');
+
+                let listItems = [].slice.call(collection.querySelectorAll('[data-bss-type="blog-loop-item"]'));
+                listItems.forEach(item => item.style.setProperty('display', 'none', 'important'));
+
+                if (canFilterCollectionByTag(collection)) {
+                    listItems = listItems.filter(item => activeTag ? item.classList.contains('post-tag-' + activeTag) : shouldShowAllItemsForEmptyFilter(collection, 'tag'));
+                }
+
+                if (canFilterCollectionByAuthor(collection)) {
+                    listItems = listItems.filter(item => activeAuthor ? item.classList.contains('post-author-' + activeAuthor) : shouldShowAllItemsForEmptyFilter(collection, 'author'));
+                }
+
+                let perPage = collection.dataset.bssPerpage || listItems.length;
+                let visibleListItems = listItems.slice((page - 1) * perPage, page * perPage);
+                visibleListItems.forEach(item => item.style.removeProperty('display'));
+
+                let isEmpty = !visibleListItems.length;
+
+                if (isEmpty) {
+                    loopBase && loopBase.style.setProperty('display', 'none', 'important');
+                    emptyState && emptyState.style.removeProperty('display');
+                }
+
+                let itemCount = listItems.length;
+                let pageCount = Math.max(Math.ceil(itemCount / perPage), 1);
+
+                updateCollectionPagination(collection, page, pageCount, isEmpty);
+
+                if (collection.dataset.bssScrollOnChange) {
+                    scrollToCollectionTop(collection);
+                }
+            }
+
+            function updateCollectionPagination(collection, page, pageCount, isEmpty) {
+                let pagination = getCollectionPagination(collection);
+                if (!pagination) return;
+
+                let paginationItems = [].slice.call(pagination.querySelectorAll('.page-item'));
+
+                if (pageCount === 1 || isEmpty) {
+                    pagination.style.setProperty('display', 'none', 'important');
+                } else {
+                    pagination.style.removeProperty('display');
+                }
+
+                let previousBtnDisabled = page - 1 <= 0;
+                let previousPage = previousBtnDisabled ? 1 : page - 1;
+
+                let nextBtnDisabled = page + 1 > pageCount;
+                let nextPage = nextBtnDisabled ? pageCount : page + 1;
+
+                for (let i = 0; i < paginationItems.length; i++) {
+                    let paginationItem = paginationItems[i];
+
+                    paginationItem.classList.remove('active', 'disabled');
+
+                    if (paginationItem.dataset.type === 'prev') {
+                        paginationItem.dataset.page = previousPage;
+
+                        if (previousBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else if (paginationItem.dataset.type === 'next') {
+                        paginationItem.dataset.page = nextPage;
+
+                        if (nextBtnDisabled) {
+                            paginationItem.classList.add('disabled');
+                        }
+                    } else {
+                        if (paginationItem.dataset.page > pageCount) {
+                            paginationItem.style.setProperty('display', 'none', 'important');
+                        } else {
+                            paginationItem.style.removeProperty('display');
+                        }
+
+                        if (paginationItem.dataset.page == page) {
+                            paginationItem.classList.add('active');
+                        }
+                    }
+                }
+            }
+
+            function scrollToCollectionTop(collection) {
+                const rect = collection.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                const threshold = 100;
+
+                if (rect.top >= 0 && viewHeight - rect.top > threshold) return;
+
+                setTimeout(() => {
+                    collection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "start"
+                    });
+                }, 0);
+            }
+
+            function updateTagNav(tagNav) {
+                const url = new URL(window.location.href);
+
+                let tagParam = 'tag';
+                let tag = url.searchParams.get(tagParam) || '';
+
+                renderTagNav(tagNav, tag);
+            }
+
+            function renderTagNav(tagNav, activeTag = '') {
+                if (!tagNav.dataset.bssSyncUrl) return;
+
+                let navItems = [].slice.call(tagNav.querySelectorAll('[data-bss-type="tag-loop-item"]'));
+
+                navItems.forEach(item => {
+                    const activeClassNode = item.dataset.hasOwnProperty('bssStateNode') ? item : item.querySelector('[data-bss-state-node]');
+                    if (!activeClassNode) return;
+
+                    activeClassNode.classList.remove('active');
+
+                    const link = item.dataset.bssHref;
+                    if (!linksToCurrentPage(link) || activeClassNode.classList.contains('disabled')) return;
+
+                    if (item.dataset.bssTag === activeTag) {
+                        activeClassNode.classList.add('active');
+                    }
+                });
+            }
+
+            function updateAuthorNav(authorNav) {
+                const url = new URL(window.location.href);
+
+                let authorParam = 'author';
+                let author = url.searchParams.get(authorParam) || '';
+
+                renderAuthorNav(authorNav, author);
+            }
+
+            function renderAuthorNav(authorNav, activeAuthor = '') {
+                if (!canFilterCollectionByAuthor(authorNav)) return;
+
+                authorNav.style.removeProperty('display');
+
+                let items = [].slice.call(authorNav.querySelectorAll('[data-bss-type="author-loop-item"]'));
+                items.forEach(item => item.classList.contains('author-' + activeAuthor) ? item.style.removeProperty('display') : item.style.setProperty('display', 'none', 'important'));
+            }
+        })();
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bold-and-bright.js"></script>
+</body>
+
+</html>
